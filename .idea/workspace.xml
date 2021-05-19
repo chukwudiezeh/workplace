@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff7eb033-df5a-4c34-819e-444b96beccad" name="Default Changelist" comment="" />
+    <list default="true" id="ff7eb033-df5a-4c34-819e-444b96beccad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,31 +24,35 @@
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.47" value="2" />
           <entry key="project.open.time.52" value="1" />
-          <entry key="project.open.time.54" value="1" />
+          <entry key="project.open.time.54" value="2" />
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.86" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="env" value="1" />
           <entry key="php" value="210" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PHP" value="210" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="env" value="43" />
           <entry key="php" value="24625" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PHP" value="24625" />
+          <entry key="PLAIN_TEXT" value="43" />
         </counts>
       </usages-collector>
     </session>
@@ -97,11 +104,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/routes/api.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="324">
                   <caret line="201" selection-start-line="201" selection-end-line="201" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.env">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -136,6 +152,9 @@
       <find>2</find>
       <find>\&lt;\?php\n\n\nuse Illuminate\\Http\\Request\;\nuse Illuminate\\Support\\Facades\\Route\;\nuse App\\Http\\Controllers\\Auth\\RegisterController\;\nuse App\\Http\\Controllers\\Auth\\LoginController\;\nuse App\\Http\\Controllers\\JobController\;\nuse App\\Http\\Controllers\\ProposalController\;\nuse App\\Http\\Controllers\\FreelancerController\;\nuse App\\Http\\Controllers\\JobTaskBoardController\;\nuse App\\Http\\Controllers\\ContractController\;\nuse App\\Http\\Controllers\\ConversationController\;\nuse App\\Http\\Controllers\\MessageController\;\nuse App\\Http\\Controllers\\ProfileController\;\n\n\/\*\n\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n\| API Routes\n\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n\|\n\| Here is where you can register API routes for your application\. These\n\| routes are loaded by the RouteServiceProvider within a group which\n\| is assigned the \&quot;api\&quot; middleware group\. Enjoy building your API\!\n\|\n\/\/ \*\/\n\/\/ Route\:\:middleware\(\'auth\:api\'\)\-\&gt;get\(\'\/user\'\, function \(Request \$request\) \{\n\/\/     return \$request\-\&gt;user\(\)\;\n\/\/ \}\)\;\n\nRoute\:\:prefix\(\'workplace\'\)\-\&gt;group\(function\(\)\{\n    Route\:\:post\(\'register\'\, \[RegisterController\:\:class\, \'register\'\]\)\; \/\/register\n    Route\:\:post\(\'login\'\, \[LoginController\:\:class\,\'login\'\]\)\; \/\/login\n    \/\/    Route\:\:middleware\(\'auth\:sanctum\'\)\-\&gt;group\(function\(\)\{\n        Route\:\:prefix\(\'\{freelancer\}\'\)\-\&gt;group\(function \(\)\{\n            Route\:\:get\(\'findJobs\'\,\[JobController\:\:class\, \'index\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/retrieve jobs based on my expertise\n            Route\:\:prefix\(\'\{job\}\'\)\-\&gt;group\(function\(\)\{\n                Route\:\:get\(\'\'\, \[JobController\:\:class\, \'show\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/ show job details so i can apply\n                Route\:\:post\(\'send_proposal\'\, \[ProposalController\:\:class\, \'create\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/submit proposals\n                Route\:\:get\(\'\{search\}\'\, \[JobController\:\:class\, \'search\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/search with keywords\n\n            \}\)\;\n        \}\)\;\n    Route\:\:prefix\(\'\{client\}\'\)\-\&gt;group\(function\(\)\{\n        Route\:\:get\(\'jobs\'\,\[JobController\:\:class\, \'showAllMyJobs\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'jobs\/\{job\}\'\, \[JobController\:\:class\, \'showOneJob\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/update\'\,\[JobController\:\:class\, \'update\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'jobs\/\{job\}\/proposals\'\,\[ProposalController\:\:class\, \'showJobProposals\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\'\, \[ProposalController\:\:class\,\'showOneJobProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\/decline\'\,\[ProposalController\:\:class\,\'declineProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\/accept\'\,\[ProposalController\:\:class\,\'acceptProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\/request_changes\'\,\[ProposalController\:\:class\,\'requestChangesInProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'freelancers\'\,\[FreelancerController\:\:class\, \'index\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'freelancers\/\{freelancer\}\'\, \[FreelancerController\:\:class\, \'showFreelancer\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'contracts\'\, \[ContractController\:\:class\,\'showClientContracts\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'contracts\/\{contract\}\'\, \[ContractController\:\:class\, \'showOneContract\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'contracts\/\{contract\}\/approved_for_payments\'\, \[ContractController\:\:class\,\'approvedForPayments\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'contracts\/\{contract\}\/need_changes\'\,\[ContractController\:\:class\, \'needChanges\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'contracts\/\{contract\}\/delayed\'\,\[ContractController\:\:class\, \'delayed\'\]\)\;\n\n    \}\)\;\n\n        Route\:\:prefix\(\'jobs\'\)\-\&gt;group\(function\(\)\{\n\n            Route\:\:post\(\'store\'\, \[JobController\:\:class\, \'store\'\]\)\-\&gt;middleware\(\'client\'\)\; \/\/ create job post\n\n        \}\)\;\n\n        \n        Route\:\:prefix\(\'proposals\'\)\-\&gt;group\(function\(\)\{\n            Route\:\:get\(\'\{freelancer\}\'\, \[ProposalController\:\:class\, \'index\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/View my proposals\n            Route\:\:get\(\'\{freelancer\}\/\{proposal\}\'\,\[ProposalController\:\:class\, \'show\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/show me a proposal details\n            Route\:\:patch\(\'\{freelancer\}\/\{proposal\}\'\, \[ProposalController\:\:class\, \'update\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/update a sent proposal\n            Route\:\:patch\(\'\{freelancer\}\/\{proposal\}\/withdraw\'\, \[ProposalController\:\:class\, \'withdrawProposal\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/withdraw a proposal\n        \}\)\;\n\n        Route\:\:get\(\'\{freelancer\}\/contracts\'\, \[ContractController\:\:class\, \'showFreelancerContracts\'\]\)\-\&gt;middleware\(\'freelancer\'\)\;\n        Route\:\:get\(\'\{freelancer\}\/contracts\/\{contract\}\'\, \[ContractController\:\:class\, \'showOneContract\'\]\)\-\&gt;middleware\(\'freelancer\'\)\;\n        Route\:\:patch\(\'\{freelancer\}\/contracts\/\{contract\}\'\,\[ContractController\:\:class\, \'completeButPendingApproval\'\]\)\-\&gt;middleware\(\'freelancer\'\)\;\n\n\n        Route\:\:post\(\'\{contract\}\/job_task_board\/create\'\, \[JobTaskBoardController\:\:class\,\'createJobTaskBoard\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/addTask\'\,\[JobTaskBoardController\:\:class\, \'addJobTask\'\]\)\;\n        Route\:\:get\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/view\'\,\[JobTaskBoardController\:\:class\, \'viewJobTaskBoard\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/move_to_todo\'\, \[JobTaskBoardController\:\:class\, \'moveToTodo\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/move_to_doing\'\, \[JobTaskBoardController\:\:class\, \'moveToDoing\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/move_to_done\'\, \[JobTaskBoardController\:\:class\, \'moveToDone\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/delete_task\'\, \[JobTaskBoardController\:\:class\, \'deleteJobTask\'\]\)\;\n        Route\:\:get\(\'\{contract\}\/conversations\'\,\[ConversationController\:\:class\,\'getAllConversations\'\]\)\;\n        Route\:\:post\(\'conversations\/create\'\, \[ConversationController\:\:class\, \'create\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\( \'conversations\/\{conversation\}\/addparticipant\/\{freelancer\}\'\, \[ConversationController\:\:class\,\'addParticipant\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'conversations\/\{conversation\}\/messages\'\, \[MessageController\:\:class\, \'getMessages\'\]\)\;\n\n\n        Route\:\:post\(\'\{freelancer\}\/employment_histories\/add\'\,\[ProfileController\:\:class\,\'addEmploymentHistory\'\]\)\;\n        Route\:\:put\(\'\{freelancer\}\/employment_histories\/\{employmentHistory\}\/update\'\,\[ProfileController\:\:class\,\'updateEmploymentHistory\'\]\)\;\n        Route\:\:get\(\'\{freelancer\}\/employment_histories\'\,\[ProfileController\:\:class\,\'getEmploymentHistory\'\]\)\;\n        Route\:\:delete\(\'\{freelancer\}\/employment_histories\/\{employmentHistory\}\/delete\'\,\[ProfileController\:\:class\,\'deleteEmploymentHistory\'\]\)\;\n\n        Route\:\:post\(\'\{freelancer\}\/educations\/add\'\,\[ProfileController\:\:class\,\'addEducation\'\]\)\;\n        Route\:\:put\(\'\{freelancer\}\/educations\/\{education\}\/update\'\,\[ProfileController\:\:class\,\'updateEducation\'\]\)\;\n        Route\:\:get\(\'\{freelancer\}\/educations\'\,\[ProfileController\:\:class\,\'getEducation\'\]\)\;\n        Route\:\:delete\(\'\{freelancer\}\/educations\/\{education\}\/delete\'\,\[ProfileController\:\:class\,\'deleteEducation\'\]\)\;\n\n    Route\:\:post\(\'\{freelancer\}\/portfolios\/add\'\,\[ProfileController\:\:class\,\'addPortfolio\'\]\)\;\n    Route\:\:put\(\'\{freelancer\}\/portfolios\/\{portfolio\}\/update\'\,\[ProfileController\:\:class\,\'updatePortfolio\'\]\)\;\n    Route\:\:get\(\'\{freelancer\}\/portfolios\'\,\[ProfileController\:\:class\,\'getPortfolio\'\]\)\;\n    Route\:\:delete\(\'\{freelancer\}\/portfolios\/\{portfolio\}\/delete\'\,\[ProfileController\:\:class\,\'deletePortfolio\'\]\)\;\n\n    Route\:\:post\(\'\{freelancer\}\/skills\/add\'\,\[ProfileController\:\:class\,\'addFreelanceSkill\'\]\)\;\n    Route\:\:put\(\'\{freelancer\}\/skills\/\{skill\}\/update\'\,\[ProfileController\:\:class\,\'updateFreelanceSkill\'\]\)\;\n    Route\:\:get\(\'\{freelancer\}\/skills\'\,\[ProfileController\:\:class\,\'getFreelanceSkill\'\]\)\;\n    Route\:\:delete\(\'\{freelancer\}\/skills\/\{skill\}\/delete\'\,\[ProfileController\:\:class\,\'deleteEducation\'\]\)\;\n\/\/    \}\n\}\)\;\n</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -180,6 +199,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FreelancerController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -307,7 +327,7 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -421,11 +441,12 @@
       <workItem from="1620895015877" duration="4257000" />
       <workItem from="1621079347667" duration="6895000" />
       <workItem from="1621385708121" duration="58000" />
+      <workItem from="1621460080839" duration="709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234241000" />
+    <option name="totallyTimeSpent" value="234950000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -438,6 +459,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -454,7 +476,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.19846153" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.19846153" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.19846153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -468,13 +490,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Models/JobTaskBoard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Conversation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -812,6 +827,13 @@
           <folding>
             <element signature="e#40#68#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
         </state>
       </provider>
     </entry>
