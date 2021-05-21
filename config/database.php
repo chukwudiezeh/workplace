@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+
+$dburl = parse_url(env("JAWSDB_URL"));
 return [
 
     /*
@@ -46,11 +48,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'remotemysql.com'),
+            'host' => env('DB_HOST', $dburl["host"]),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', '7dHekBPYAV'),
-            'username' => env('DB_USERNAME', '7dHekBPYAV'),
-            'password' => env('DB_PASSWORD', 'bUsTyMQ2Wd'),
+            'database' => env('DB_DATABASE', ltrim($dburl["path"], '/')),
+            'username' => env('DB_USERNAME', $dburl["user"]),
+            'password' => env('DB_PASSWORD', $dburl["pass"]),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
