@@ -17,8 +17,8 @@ class CreateFreelanceTestResultsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('freelancers')->onDelete('cascade');
-            $table->unsignedBigInteger('test_id');
-            $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
+//            $table->unsignedBigInteger('test_id');
+//            $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
             $table->decimal('score',4,1);
             $table->boolean('visible_to_clients');
             $table->timestamp('started_by');
