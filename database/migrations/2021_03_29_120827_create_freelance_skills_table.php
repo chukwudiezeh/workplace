@@ -17,7 +17,7 @@ class CreateFreelanceSkillsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('freelancers')->onDelete('cascade');
-            $table->unsignedInteger('skill_id');
+            $table->unsignedBigInteger('skill_id');
             $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');
             $table->timestamps();
         });
