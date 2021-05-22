@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff7eb033-df5a-4c34-819e-444b96beccad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_29_121036_create_freelance_test_results_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_29_121036_create_freelance_test_results_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,12 +48,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="5" />
-          <entry key="php" value="285" />
+          <entry key="php" value="286" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="285" />
+          <entry key="PHP" value="286" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
@@ -84,11 +83,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_29_121036_create_freelance_test_results_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -152,12 +160,12 @@
         <option value="$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_14_025214_create_job_invites_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_18_000035_create_job_task_boards_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_03_044030_create_conversations_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_03_044412_create_messages_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_03_29_120827_create_freelance_skills_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_03_29_121036_create_freelance_test_results_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" />
       </list>
     </option>
   </component>
@@ -285,7 +293,7 @@
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="675" />
     <option name="y" value="-8" />
     <option name="width" value="699" />
@@ -363,12 +371,12 @@
       <workItem from="1621385708121" duration="58000" />
       <workItem from="1621460080839" duration="2936000" />
       <workItem from="1621471092053" duration="14836000" />
-      <workItem from="1621650681813" duration="5139000" />
+      <workItem from="1621650681813" duration="5782000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257152000" />
+    <option name="totallyTimeSpent" value="257795000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_025214_create_job_invites_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -772,6 +773,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
         </state>
       </provider>
     </entry>

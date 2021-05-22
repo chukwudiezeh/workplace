@@ -33,52 +33,52 @@ class CreateContractsTable extends Migration
             $table->timestamps();
         });
 
-        $con = [
-            [
-         'client_id'=> 1,
-         'freelancer_id'=> 2,
-         'job_id'=> 12,
-         'proposal_id'=> 11,
-         'starts_at'=> now(),
-         'ends_at'=> now(),
-         'compensation_type_id'=> 1,
-         'contract_fee'=> "150000.00",
-         'contract_status_id'=> 1],
-        [
-            'client_id'=> 2,
-            'freelancer_id'=> 6,
-            'job_id'=> 19,
-            'proposal_id'=> 20,
-            'starts_at'=> now(),
-            'ends_at'=> now(),
-            'compensation_type_id'=> 1,
-            'contract_fee'=> "140000.00",
-            'contract_status_id'=> 1],
-
-            [
-                'client_id'=> 1,
-                'freelancer_id'=> 99,
-                'job_id'=> 12,
-                'proposal_id'=> 11,
-                'starts_at'=> now(),
-                'ends_at'=> now(),
-            'compensation_type_id'=> 1,
-            'contract_fee'=> "20000.00",
-                'contract_status_id'=> 1],
-
-            [
-                'client_id'=> 2,
-                'freelancer_id'=> 101,
-                'job_id'=> 115,
-                'proposal_id'=> 101,
-                'starts_at'=> now(),
-                'ends_at'=> now(),
-                'compensation_type_id'=> 1,
-                'contract_fee'=> "200000.00",
-                'contract_status_id'=> 1],
-        ];
-
-        \Illuminate\Support\Facades\DB::table('contracts')->insert($con);
+//        $con = [
+//            [
+//         'client_id'=> 1,
+//         'freelancer_id'=> 2,
+//         'job_id'=> 12,
+//         'proposal_id'=> 11,
+//         'starts_at'=> now(),
+//         'ends_at'=> now(),
+//         'compensation_type_id'=> 1,
+//         'contract_fee'=> "150000.00",
+//         'contract_status_id'=> 1],
+//        [
+//            'client_id'=> 2,
+//            'freelancer_id'=> 6,
+//            'job_id'=> 19,
+//            'proposal_id'=> 20,
+//            'starts_at'=> now(),
+//            'ends_at'=> now(),
+//            'compensation_type_id'=> 1,
+//            'contract_fee'=> "140000.00",
+//            'contract_status_id'=> 1],
+//
+//            [
+//                'client_id'=> 1,
+//                'freelancer_id'=> 99,
+//                'job_id'=> 12,
+//                'proposal_id'=> 11,
+//                'starts_at'=> now(),
+//                'ends_at'=> now(),
+//            'compensation_type_id'=> 1,
+//            'contract_fee'=> "20000.00",
+//                'contract_status_id'=> 1],
+//
+//            [
+//                'client_id'=> 2,
+//                'freelancer_id'=> 101,
+//                'job_id'=> 115,
+//                'proposal_id'=> 101,
+//                'starts_at'=> now(),
+//                'ends_at'=> now(),
+//                'compensation_type_id'=> 1,
+//                'contract_fee'=> "200000.00",
+//                'contract_status_id'=> 1],
+//        ];
+//
+//        \Illuminate\Support\Facades\DB::table('contracts')->insert($con);
     }
 
     /**
