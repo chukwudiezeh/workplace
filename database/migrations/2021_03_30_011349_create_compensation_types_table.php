@@ -15,7 +15,7 @@ class CreateCompensationTypesTable extends Migration
     public function up()
     {
         Schema::create('compensation_types', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements('id');
             $table->string('name');
             $table->timestamps();
         });

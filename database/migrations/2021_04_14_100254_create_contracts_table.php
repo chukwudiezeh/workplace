@@ -25,10 +25,10 @@ class CreateContractsTable extends Migration
             $table->foreign('proposal_id')->references('id')->on('proposals')->onDelete('cascade');
             $table->date('starts_at');
             $table->date('ends_at');
-            $table->unsignedInteger('compensation_type_id');
+            $table->unsignedSmallInteger('compensation_type_id');
             $table->foreign('compensation_type_id')->references('id')->on('compensation_types')->onDelete('cascade');
             $table->decimal('contract_fee',8,2);
-            $table->unsignedInteger('contract_status_id')->default(5);
+            $table->unsignedSmallInteger('contract_status_id')->default(5);
             $table->foreign('contract_status_id')->references('id')->on('contract_status')->onDelete('cascade');
             $table->timestamps();
         });

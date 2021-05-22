@@ -15,7 +15,7 @@ class CreateContractStatusTable extends Migration
     public function up()
     {
         Schema::create('contract_status', function (Blueprint $table) {
-            $table->id();
+            $table->smallIncrements('id');
             $table->string('name');
             $table->timestamps();
         });

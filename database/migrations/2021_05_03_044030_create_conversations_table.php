@@ -16,11 +16,11 @@ class CreateConversationsTable extends Migration
         Schema::create('conversations', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->unsignedInteger('creator_id');
-            $table->foreign('creator_id')->references('id')->on('creator');
+            $table->unsignedInteger('client_id');
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->unsignedInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
-            $table->json('participants'); // participants: [creator:"", freelancer:[]]
+            $table->json('participants'); // participants: [freelancer:[]]
             $table->timestamps();
         });
     }
