@@ -15,13 +15,13 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('client_id');
+            $table->unsignedBigInteger('client_id');
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
-            $table->unsignedInteger('freelancer_id');
+            $table->unsignedBigInteger('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('freelancers')->onDelete('cascade');
-            $table->unsignedInteger('job_id');
+            $table->unsignedBigInteger('job_id');
             $table->foreign('job_id')->references('id')->on('jobs')->onDelete('cascade');
-            $table->unsignedInteger('proposal_id');
+            $table->unsignedBigInteger('proposal_id');
             $table->foreign('proposal_id')->references('id')->on('proposals')->onDelete('cascade');
             $table->date('starts_at');
             $table->date('ends_at');

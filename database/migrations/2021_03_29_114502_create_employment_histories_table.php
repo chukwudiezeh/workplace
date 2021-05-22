@@ -15,7 +15,7 @@ class CreateEmploymentHistoriesTable extends Migration
     {
         Schema::create('employment_histories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('freelancer_id');
+            $table->unsignedBigInteger('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('freelancers')->onDelete('cascade');
             $table->string('company');
             $table->text('location');

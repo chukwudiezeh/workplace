@@ -15,7 +15,7 @@ class CreateFreelanceSkillsTable extends Migration
     {
         Schema::create('freelance_skills', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('freelancer_id');
+            $table->unsignedBigInteger('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('freelancers')->onDelete('cascade');
             $table->unsignedInteger('skill_id');
             $table->foreign('skill_id')->references('id')->on('skills')->onDelete('cascade');

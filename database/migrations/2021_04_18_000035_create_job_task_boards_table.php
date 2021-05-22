@@ -15,7 +15,7 @@ class CreateJobTaskBoardsTable extends Migration
     {
         Schema::create('job_task_boards', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('contract_id');
+            $table->unsignedBigInteger('contract_id');
             $table->foreign('contract_id')->references('id')->on('contracts')->onDelete('cascade');
             $table->json('job_tasks')->nullable();
             $table->timestamps();

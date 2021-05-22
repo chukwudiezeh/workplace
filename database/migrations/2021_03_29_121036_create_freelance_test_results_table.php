@@ -15,9 +15,9 @@ class CreateFreelanceTestResultsTable extends Migration
     {
         Schema::create('freelance_test_results', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('freelancer_id');
+            $table->unsignedBigInteger('freelancer_id');
             $table->foreign('freelancer_id')->references('id')->on('freelancers')->onDelete('cascade');
-            $table->unsignedInteger('test_id');
+            $table->unsignedBigInteger('test_id');
             $table->foreign('test_id')->references('id')->on('tests')->onDelete('cascade');
             $table->decimal('score',4,1);
             $table->boolean('visible_to_clients');
