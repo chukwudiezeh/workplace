@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 // use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
-// use Illuminate\Http\Response;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Validator;
