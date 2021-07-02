@@ -62,7 +62,7 @@ Route::prefix('workplace')->group(function(){
                     Route::delete('{freelanceSkill}/delete', [ProfileController::class, 'deleteFreelanceSkill'])->middleware('freelancer');
                 });
             });
-            Route::get('findJobs',[JobController::class, 'index'])->middleware('freelancer'); //retrieve jobs based on my expertise
+            Route::get('findJobs',[JobController::class, 'index'])->middleware('freelancer'); //retrieve jobs based on my category
             Route::prefix('{job}')->group(function(){
                 Route::get('', [JobController::class, 'show'])->middleware('freelancer'); // show job details so i can apply
                 Route::post('send_proposal', [ProposalController::class, 'create'])->middleware('freelancer'); //submit proposals //TODO notify client of new proposal

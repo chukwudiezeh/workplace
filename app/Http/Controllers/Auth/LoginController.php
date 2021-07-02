@@ -87,7 +87,7 @@ class LoginController extends Controller
     {
         $token = $user->createToken('laravel8Token')->plainTextToken;
 
-        return response()->json(['data' => $user, 'token'=>$token], 200);
+        return response()->json(['data' => $user, 'token' => $token], 200);
     }
 
     protected function sendFailedLoginResponse(Request $request)
@@ -98,8 +98,8 @@ class LoginController extends Controller
         // $error = ['auth_failed'=>'Unauthorized. Invalid email or password'];
         // return response()->json(['error'=> $error]);
 
-        return throw ValidationException::withMessages([
-            'email' => ['The provided credentials are incorrect.'],
+        return ValidationException::withMessages([
+            'email' => ['Unauthorized! Invalid email or password.'],
         ]);
     }
 

@@ -7,25 +7,25 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Job;
 use App\Models\Client;
+use App\Models\Freelancer;
 
 
 class JobController extends Controller
 {
     //freelancer job actions
-    public function index($freelancer){
-        $jobss=[];
-        $jobs = Job::where('job_status_id',1)->get();
-        $freelancer_skills = \App\Models\FreelanceSkill::where('freelancer_id', $freelancer);
-        foreach($jobs as $job){
-            foreach($freelancer_skills as $freelancer_skill){
-                $skill_required = $job->skill_required;
-                if (in_array($freelancer_skill, $skill_required)){
-                    array_push($jobss,$job);
-                }
-            }
-
-        }
-        return response()->json(['data' => $jobss],200);
+    public function index(Freelancer $freelancer) {
+        $jobs = Job::where([['job_status_id','=',1],['category_id','=',$freelancer->category_id]])->get();
+//        $freelancer_skills = \App\Models\FreelanceSkill::where('freelancer_id', $freelancer);
+//        foreach($jobs as $job){
+//            foreach($freelancer_skills as $freelancer_skill){
+//                $skill_required = $job->skill_required;
+//                if (in_array($freelancer_skill[1], $skill_required)){
+//                    array_push($jobss,$job);
+//                }
+//            }
+//
+//        }
+        return response()->json(['data' => $jobs],200);
     }
 
     public function show(Job $job){
