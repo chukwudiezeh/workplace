@@ -86,6 +86,13 @@ class LoginController extends Controller
     protected function authenticated($user)
     {
         $token = $user->createToken('laravel8Token')->plainTextToken;
+        if ($user->user_type_id == 1){
+            $user->userType;
+            $user->freelancer;
+        }else if($user->user_type_id == 2){
+            $user->userType;
+            $user->client;
+        }
 
         return response()->json(['data' => $user, 'token' => $token], 200);
     }

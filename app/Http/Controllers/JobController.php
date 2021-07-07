@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\JobResource;
 use App\Models\Proposal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -25,7 +26,8 @@ class JobController extends Controller
 //            }
 //
 //        }
-        return response()->json(['data' => $jobs],200);
+//        return response()->json(['data' => $jobs],200);
+        return  JobResource::collection($jobs);
     }
 
     public function show(Job $job){

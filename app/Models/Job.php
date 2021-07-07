@@ -29,6 +29,25 @@ class Job extends Model
         return $this->belongsTo(Client::class,'client_id');
     }
 
+    public function category(){
+        return $this->belongsTo(Category::class,'category_id');
+    }
+    public function subcategory(){
+        return $this->belongsTo(SubCategory::class,'subcategory_id');
+    }
+    public function compensationType(){
+        return $this->belongsTo(CompensationType::class,'compensation_type_id');
+    }
+    public function experienceLevel(){
+    return $this->belongsTo(ExperienceLevel::class,'experience_level_id');
+}
+    public function jobStatus(){
+        return $this->belongsTo(JobStatus::class,'job_status_id');
+    }
+    public function duration(){
+        return $this->belongsTo(Duration::class,'duration_id');
+    }
+
     public function jobInvites(){
         return $this->hasMany(job::class,'job_id');
     }

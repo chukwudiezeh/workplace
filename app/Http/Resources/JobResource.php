@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class JobResource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+//        return parent::toArray($request);
+        return [
+            'client' => $this->client,
+            'title' => $this->title,
+            'description' => $this->description,
+            'category' => $this->category,
+            'subcategory' => $this->subcategory,
+            'compensation_type' => $this->compensationType,
+            'experience_level' => $this->experienceLevel,
+            'job_status' => $this->jobStatus,
+            'duration' => $this->duration,
+            'skills_required' => $this->skills_required,
+            'budget' => $this->budget
+        ];
+    }
+}
