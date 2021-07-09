@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff7eb033-df5a-4c34-819e-444b96beccad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workplace.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workplace.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JobController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Job.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Job.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProposalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProposalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,19 +56,22 @@
           <entry key="project.open.time.69" value="1" />
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.86" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.open.time.88" value="1" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Procfile" value="2" />
           <entry key="env" value="8" />
-          <entry key="php" value="332" />
+          <entry key="json" value="1" />
+          <entry key="php" value="337" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="332" />
+          <entry key="JSON" value="1" />
+          <entry key="PHP" value="337" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -72,12 +79,12 @@
         <counts>
           <entry key="dummy" value="31" />
           <entry key="env" value="276" />
-          <entry key="php" value="26673" />
+          <entry key="php" value="27454" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="26673" />
+          <entry key="PHP" value="27454" />
           <entry key="PLAIN_TEXT" value="307" />
         </counts>
       </usages-collector>
@@ -86,39 +93,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JobController.php">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+            <state relative-caret-position="690">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
               <folding>
-                <element signature="e#40#75#0#PHP" expanded="true" />
+                <element signature="e#8#36#0#PHP" expanded="true" />
+                <element signature="e#1662#2178#2#PHP" />
+                <element signature="e#2231#2747#2#PHP" />
+                <element signature="e#2808#3380#2#PHP" />
+                <element signature="e#3438#3989#2#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProposalController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+              <folding>
+                <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/Job.php">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="64" column="130" selection-start-line="64" selection-start-column="130" selection-end-line="64" selection-end-column="130" />
-              <folding>
-                <element signature="e#8#36#0#PHP" expanded="true" />
-                <element signature="e#1473#4005#2#PHP" />
-                <element signature="e#1662#2178#2#PHP" />
-                <element signature="e#2231#2747#2#PHP" />
-                <element signature="e#2808#3380#2#PHP" />
-                <element signature="e#3438#3989#2#PHP" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -129,7 +135,11 @@
     <findStrings>
       <find>2</find>
       <find>\&lt;\?php\n\n\nuse Illuminate\\Http\\Request\;\nuse Illuminate\\Support\\Facades\\Route\;\nuse App\\Http\\Controllers\\Auth\\RegisterController\;\nuse App\\Http\\Controllers\\Auth\\LoginController\;\nuse App\\Http\\Controllers\\JobController\;\nuse App\\Http\\Controllers\\ProposalController\;\nuse App\\Http\\Controllers\\FreelancerController\;\nuse App\\Http\\Controllers\\JobTaskBoardController\;\nuse App\\Http\\Controllers\\ContractController\;\nuse App\\Http\\Controllers\\ConversationController\;\nuse App\\Http\\Controllers\\MessageController\;\nuse App\\Http\\Controllers\\ProfileController\;\n\n\/\*\n\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n\| API Routes\n\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\n\|\n\| Here is where you can register API routes for your application\. These\n\| routes are loaded by the RouteServiceProvider within a group which\n\| is assigned the \&quot;api\&quot; middleware group\. Enjoy building your API\!\n\|\n\/\/ \*\/\n\/\/ Route\:\:middleware\(\'auth\:api\'\)\-\&gt;get\(\'\/user\'\, function \(Request \$request\) \{\n\/\/     return \$request\-\&gt;user\(\)\;\n\/\/ \}\)\;\n\nRoute\:\:prefix\(\'workplace\'\)\-\&gt;group\(function\(\)\{\n    Route\:\:post\(\'register\'\, \[RegisterController\:\:class\, \'register\'\]\)\; \/\/register\n    Route\:\:post\(\'login\'\, \[LoginController\:\:class\,\'login\'\]\)\; \/\/login\n    \/\/    Route\:\:middleware\(\'auth\:sanctum\'\)\-\&gt;group\(function\(\)\{\n        Route\:\:prefix\(\'\{freelancer\}\'\)\-\&gt;group\(function \(\)\{\n            Route\:\:get\(\'findJobs\'\,\[JobController\:\:class\, \'index\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/retrieve jobs based on my expertise\n            Route\:\:prefix\(\'\{job\}\'\)\-\&gt;group\(function\(\)\{\n                Route\:\:get\(\'\'\, \[JobController\:\:class\, \'show\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/ show job details so i can apply\n                Route\:\:post\(\'send_proposal\'\, \[ProposalController\:\:class\, \'create\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/submit proposals\n                Route\:\:get\(\'\{search\}\'\, \[JobController\:\:class\, \'search\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/search with keywords\n\n            \}\)\;\n        \}\)\;\n    Route\:\:prefix\(\'\{client\}\'\)\-\&gt;group\(function\(\)\{\n        Route\:\:get\(\'jobs\'\,\[JobController\:\:class\, \'showAllMyJobs\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'jobs\/\{job\}\'\, \[JobController\:\:class\, \'showOneJob\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/update\'\,\[JobController\:\:class\, \'update\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'jobs\/\{job\}\/proposals\'\,\[ProposalController\:\:class\, \'showJobProposals\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\'\, \[ProposalController\:\:class\,\'showOneJobProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\/decline\'\,\[ProposalController\:\:class\,\'declineProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\/accept\'\,\[ProposalController\:\:class\,\'acceptProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'jobs\/\{job\}\/Proposals\/\{proposal\}\/request_changes\'\,\[ProposalController\:\:class\,\'requestChangesInProposal\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'freelancers\'\,\[FreelancerController\:\:class\, \'index\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'freelancers\/\{freelancer\}\'\, \[FreelancerController\:\:class\, \'showFreelancer\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'contracts\'\, \[ContractController\:\:class\,\'showClientContracts\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'contracts\/\{contract\}\'\, \[ContractController\:\:class\, \'showOneContract\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'contracts\/\{contract\}\/approved_for_payments\'\, \[ContractController\:\:class\,\'approvedForPayments\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'contracts\/\{contract\}\/need_changes\'\,\[ContractController\:\:class\, \'needChanges\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\(\'contracts\/\{contract\}\/delayed\'\,\[ContractController\:\:class\, \'delayed\'\]\)\;\n\n    \}\)\;\n\n        Route\:\:prefix\(\'jobs\'\)\-\&gt;group\(function\(\)\{\n\n            Route\:\:post\(\'store\'\, \[JobController\:\:class\, \'store\'\]\)\-\&gt;middleware\(\'client\'\)\; \/\/ create job post\n\n        \}\)\;\n\n        \n        Route\:\:prefix\(\'proposals\'\)\-\&gt;group\(function\(\)\{\n            Route\:\:get\(\'\{freelancer\}\'\, \[ProposalController\:\:class\, \'index\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/View my proposals\n            Route\:\:get\(\'\{freelancer\}\/\{proposal\}\'\,\[ProposalController\:\:class\, \'show\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/show me a proposal details\n            Route\:\:patch\(\'\{freelancer\}\/\{proposal\}\'\, \[ProposalController\:\:class\, \'update\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/update a sent proposal\n            Route\:\:patch\(\'\{freelancer\}\/\{proposal\}\/withdraw\'\, \[ProposalController\:\:class\, \'withdrawProposal\'\]\)\-\&gt;middleware\(\'freelancer\'\)\; \/\/withdraw a proposal\n        \}\)\;\n\n        Route\:\:get\(\'\{freelancer\}\/contracts\'\, \[ContractController\:\:class\, \'showFreelancerContracts\'\]\)\-\&gt;middleware\(\'freelancer\'\)\;\n        Route\:\:get\(\'\{freelancer\}\/contracts\/\{contract\}\'\, \[ContractController\:\:class\, \'showOneContract\'\]\)\-\&gt;middleware\(\'freelancer\'\)\;\n        Route\:\:patch\(\'\{freelancer\}\/contracts\/\{contract\}\'\,\[ContractController\:\:class\, \'completeButPendingApproval\'\]\)\-\&gt;middleware\(\'freelancer\'\)\;\n\n\n        Route\:\:post\(\'\{contract\}\/job_task_board\/create\'\, \[JobTaskBoardController\:\:class\,\'createJobTaskBoard\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/addTask\'\,\[JobTaskBoardController\:\:class\, \'addJobTask\'\]\)\;\n        Route\:\:get\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/view\'\,\[JobTaskBoardController\:\:class\, \'viewJobTaskBoard\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/move_to_todo\'\, \[JobTaskBoardController\:\:class\, \'moveToTodo\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/move_to_doing\'\, \[JobTaskBoardController\:\:class\, \'moveToDoing\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/move_to_done\'\, \[JobTaskBoardController\:\:class\, \'moveToDone\'\]\)\;\n        Route\:\:patch\(\'\{contract\}\/job_task_board\/\{jobTaskBoard\}\/\{taskId\}\/delete_task\'\, \[JobTaskBoardController\:\:class\, \'deleteJobTask\'\]\)\;\n        Route\:\:get\(\'\{contract\}\/conversations\'\,\[ConversationController\:\:class\,\'getAllConversations\'\]\)\;\n        Route\:\:post\(\'conversations\/create\'\, \[ConversationController\:\:class\, \'create\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:patch\( \'conversations\/\{conversation\}\/addparticipant\/\{freelancer\}\'\, \[ConversationController\:\:class\,\'addParticipant\'\]\)\-\&gt;middleware\(\'client\'\)\;\n        Route\:\:get\(\'conversations\/\{conversation\}\/messages\'\, \[MessageController\:\:class\, \'getMessages\'\]\)\;\n\n\n        Route\:\:post\(\'\{freelancer\}\/employment_histories\/add\'\,\[ProfileController\:\:class\,\'addEmploymentHistory\'\]\)\;\n        Route\:\:put\(\'\{freelancer\}\/employment_histories\/\{employmentHistory\}\/update\'\,\[ProfileController\:\:class\,\'updateEmploymentHistory\'\]\)\;\n        Route\:\:get\(\'\{freelancer\}\/employment_histories\'\,\[ProfileController\:\:class\,\'getEmploymentHistory\'\]\)\;\n        Route\:\:delete\(\'\{freelancer\}\/employment_histories\/\{employmentHistory\}\/delete\'\,\[ProfileController\:\:class\,\'deleteEmploymentHistory\'\]\)\;\n\n        Route\:\:post\(\'\{freelancer\}\/educations\/add\'\,\[ProfileController\:\:class\,\'addEducation\'\]\)\;\n        Route\:\:put\(\'\{freelancer\}\/educations\/\{education\}\/update\'\,\[ProfileController\:\:class\,\'updateEducation\'\]\)\;\n        Route\:\:get\(\'\{freelancer\}\/educations\'\,\[ProfileController\:\:class\,\'getEducation\'\]\)\;\n        Route\:\:delete\(\'\{freelancer\}\/educations\/\{education\}\/delete\'\,\[ProfileController\:\:class\,\'deleteEducation\'\]\)\;\n\n    Route\:\:post\(\'\{freelancer\}\/portfolios\/add\'\,\[ProfileController\:\:class\,\'addPortfolio\'\]\)\;\n    Route\:\:put\(\'\{freelancer\}\/portfolios\/\{portfolio\}\/update\'\,\[ProfileController\:\:class\,\'updatePortfolio\'\]\)\;\n    Route\:\:get\(\'\{freelancer\}\/portfolios\'\,\[ProfileController\:\:class\,\'getPortfolio\'\]\)\;\n    Route\:\:delete\(\'\{freelancer\}\/portfolios\/\{portfolio\}\/delete\'\,\[ProfileController\:\:class\,\'deletePortfolio\'\]\)\;\n\n    Route\:\:post\(\'\{freelancer\}\/skills\/add\'\,\[ProfileController\:\:class\,\'addFreelanceSkill\'\]\)\;\n    Route\:\:put\(\'\{freelancer\}\/skills\/\{skill\}\/update\'\,\[ProfileController\:\:class\,\'updateFreelanceSkill\'\]\)\;\n    Route\:\:get\(\'\{freelancer\}\/skills\'\,\[ProfileController\:\:class\,\'getFreelanceSkill\'\]\)\;\n    Route\:\:delete\(\'\{freelancer\}\/skills\/\{skill\}\/delete\'\,\[ProfileController\:\:class\,\'deleteEducation\'\]\)\;\n\/\/    \}\n\}\)\;\n</find>
+      <find>storeAs</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\wamp64\www\laravel-projects\workplace</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -137,9 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Models/Education.php" />
-        <option value="$PROJECT_DIR$/app/Models/Portfolio.php" />
-        <option value="$PROJECT_DIR$/app/Models/FreelanceSkill.php" />
         <option value="$PROJECT_DIR$/app/Models/Client.php" />
         <option value="$PROJECT_DIR$/app/Models/Freelancer.php" />
         <option value="$PROJECT_DIR$/app/Models/JobInvites.php" />
@@ -163,7 +170,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2021_03_29_115259_create_educations_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_03_29_120435_create_portfolios_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_14_025214_create_job_invites_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_18_000035_create_job_task_boards_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_03_044030_create_conversations_table.php" />
@@ -174,7 +180,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/FreelancerController.php" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/routes/api.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/EnsureClient.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/EnsureFreelancer.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/UserResource.php" />
@@ -188,6 +193,11 @@
         <option value="$PROJECT_DIR$/app/Models/Category.php" />
         <option value="$PROJECT_DIR$/app/Models/Job.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/JobResource.php" />
+        <option value="$PROJECT_DIR$/app/Providers/DropboxServiceProvider.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ProposalController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php" />
       </list>
     </option>
   </component>
@@ -313,19 +323,19 @@
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/guzzle-factory" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="676" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="697" />
-    <option name="height" value="775" />
+    <option name="height" value="768" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,34 +357,6 @@
             <path>
               <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
               <item name="workplace" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -383,15 +365,11 @@
               <item name="database" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="workplace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="workplace" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,12 +422,13 @@
       <workItem from="1623685628332" duration="590000" />
       <workItem from="1624913638739" duration="5254000" />
       <workItem from="1625222665466" duration="13148000" />
-      <workItem from="1625495263046" duration="16737000" />
+      <workItem from="1625495263046" duration="28683000" />
+      <workItem from="1625799721070" duration="3806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304564000" />
+    <option name="totallyTimeSpent" value="320316000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,10 +440,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-7" y="0" width="697" height="768" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990403" visible="true" weight="0.20045386" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990403" weight="0.295764" />
       <window_info id="Structure" order="1" sideWeight="0.5009597" side_tool="true" weight="0.26096824" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -479,7 +458,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.19846153" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" visible="true" weight="0.19846153" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924356" weight="0.4923077" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -515,37 +494,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="792" column="9" selection-start-line="792" selection-start-column="9" selection-end-line="792" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_29_111920_create_experience_levels_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2013_03_29_104544_create_user_types_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -665,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_052613_create_proposal_status_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -756,13 +697,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/UserResource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="24" column="54" lean-forward="true" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/UserResource.php" />
     <entry file="file://$PROJECT_DIR$/app/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-336" />
@@ -793,21 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="35" column="35" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="64" column="130" selection-start-line="64" selection-start-column="130" selection-end-line="64" selection-end-column="130" />
-          <folding>
-            <element signature="e#8#36#0#PHP" expanded="true" />
-            <element signature="e#1473#4005#2#PHP" />
-            <element signature="e#1662#2178#2#PHP" />
-            <element signature="e#2231#2747#2#PHP" />
-            <element signature="e#2808#3380#2#PHP" />
-            <element signature="e#3438#3989#2#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,20 +780,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JobController.php">
+    <entry file="file://$PROJECT_DIR$/app/Providers/DropboxServiceProvider.php" />
+    <entry file="file://$PROJECT_DIR$/config/filesystems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="46" column="9" lean-forward="true" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-          <folding>
-            <element signature="e#40#75#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="99">
+          <caret line="53" selection-start-line="53" selection-end-line="58" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Job.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
+        <state relative-caret-position="378">
           <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JobController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="119" column="38" lean-forward="true" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="e#8#36#0#PHP" expanded="true" />
+            <element signature="e#1662#2178#2#PHP" />
+            <element signature="e#2231#2747#2#PHP" />
+            <element signature="e#2808#3380#2#PHP" />
+            <element signature="e#3438#3989#2#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProposalController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="48" column="11" lean-forward="true" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -44,7 +44,7 @@ class ProposalController extends Controller
             'cover_letter' => $request->cover_letter,
             'milestone' => $request->milestone,
             'payment_type' => $request->payment_type,
-            'estimated_enddate' => $request->estimated_enddate,
+            'proposed_duration' => $request->proposed_duration,
             'proposed_fee' => $request->proposed_fee
         ]);
 
@@ -55,7 +55,7 @@ class ProposalController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'cover_letter' => ['bail','required', 'string','alpha', 'max:2000'],
+            'cover_letter' => ['bail','required', 'string','alpha', 'max:5000'],
             'milestone' => ['bail', 'required'],
             'payment_type' => ['bail', 'required','string'],
             'estimated_enddate' => ['bail', 'required', 'string'],
@@ -63,8 +63,7 @@ class ProposalController extends Controller
         ]);
     }
 
-
-    /**
+     /**
      * Display the specified resource.
      *
      * @param $freelancer
