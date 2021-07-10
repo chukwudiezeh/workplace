@@ -42,10 +42,8 @@ class ProposalController extends Controller
             'freelancer_id' => $request->freelancer_id,
             'job_id' => $request->job_id,
             'cover_letter' => $request->cover_letter,
-//            'milestone' => $request->milestone,
-//            'payment_type' => $request->payment_type,
-            'proposed_duration' => $request->proposed_duration,
-            'proposed_fee' => $request->proposed_fee
+            'proposed_duration_id' => $request->proposed_duration_id,
+            'proposed_fee' => $request->proposed_fee,
         ]);
 
         return response()->json(['data'=>$proposal,'message' => 'Proposal sent successfully'], 201);
@@ -55,10 +53,10 @@ class ProposalController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'cover_letter' => ['bail','required', 'string','alpha', 'max:5000'],
+            'cover_letter' => ['bail','required', 'string', 'max:5000'],
 //            'milestone' => ['bail', 'required'],
 //            'payment_type' => ['bail', 'required','string'],
-            'proposed_duration' => ['bail', 'required', 'numeric'],
+            'proposed_duration_id' => ['bail', 'required', 'numeric'],
             'proposed_fee' =>['required', 'numeric'],
         ]);
     }

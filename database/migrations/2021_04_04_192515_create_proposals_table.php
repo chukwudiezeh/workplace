@@ -22,7 +22,7 @@ class CreateProposalsTable extends Migration
             $table->text('cover_letter');
             $table->json('milestone')->nullable();
             $table->string('payment_type')->nullable();
-            $table->unsignedSmallInteger('proposed_duration_id');
+            $table->smallInteger('proposed_duration_id');
             $table->decimal('proposed_fee',8,2);
             $table->unsignedSmallInteger('proposal_status_id')->default(1);
             $table->foreign('proposal_status_id')->references('id')->on('proposal_status')->onDelete('cascade');

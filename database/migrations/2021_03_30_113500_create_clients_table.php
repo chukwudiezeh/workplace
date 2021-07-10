@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateClientsTable extends Migration
 {
@@ -17,6 +18,8 @@ class CreateClientsTable extends Migration
             $table->id();
             $table->timestamps();
         });
+
+        DB::table('clients')->insert(['id'=> 1]);
     }
 
     /**

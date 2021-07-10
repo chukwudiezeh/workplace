@@ -17,7 +17,7 @@ class Proposal extends Model
      * @var array
      */
     protected $fillable = [
-        'freelancer_id','job_id','cover_letter','milestone','payment_type', 'estimated_enddate',
+        'freelancer_id','job_id','cover_letter','milestone','payment_type', 'proposed_duration_id',
         'proposed_fee','proposal_status_id',
     ];
 }

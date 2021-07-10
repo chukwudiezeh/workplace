@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateFreelancersTable extends Migration
 {
@@ -38,6 +39,19 @@ class CreateFreelancersTable extends Migration
             // $table->foreign('freelance_skill_id')->references('id')->on('freelance_skills')->onDelete('cascade');
             $table->timestamps();
         });
+
+        $freelancer = [
+            "user_id"=> 1,
+            "overview"=> null,
+            "address"=> null,
+            "experience_level_id"=> null,
+            "category_id"=> 1,
+            "subcategory_id"=> null,
+            "hourly_rate"=> null,
+
+        ];
+
+        DB::table('freelancers')->insert($freelancer);
     }
 
     /**

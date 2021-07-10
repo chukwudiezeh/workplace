@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Ramsey\Uuid\Type\Decimal;
+use Illuminate\Support\Facades\DB;
 
 class CreateJobsTable extends Migration
 {
@@ -36,6 +36,24 @@ class CreateJobsTable extends Migration
             $table->decimal('budget',8,2);
             $table->timestamps();
         });
+
+        $job = [
+
+                'client_id' => 1,
+                "title"=> "Convert Figma Landing page design to Responsive bootstrap webpage",
+                "description"=> "The figma file / link will be sent to you\r\n\r\nTask:\r\n- Transform into responsive bootstrap webpage with JS (slider, success state for button & video modal)\r\n- Make sure on mobile looks good.",
+                'category_id' => 1,
+                'subcategory_id' => 1,
+                'compensation_type_id'=> 1,
+                'experience_level_id' => 2,
+                'job_status_id'=> 1,
+                'duration_id'=> 1,
+                'skills_required' => "{\"a\":1,\"b\": 2,\"c\": 3}",
+                'budget'=> 50000.00
+
+        ];
+
+        DB::table('jobs')->insert($job);
     }
 
     /**
