@@ -42,8 +42,8 @@ class ProposalController extends Controller
             'freelancer_id' => $request->freelancer_id,
             'job_id' => $request->job_id,
             'cover_letter' => $request->cover_letter,
-            'milestone' => $request->milestone,
-            'payment_type' => $request->payment_type,
+//            'milestone' => $request->milestone,
+//            'payment_type' => $request->payment_type,
             'proposed_duration' => $request->proposed_duration,
             'proposed_fee' => $request->proposed_fee
         ]);
@@ -56,9 +56,9 @@ class ProposalController extends Controller
     {
         return Validator::make($data, [
             'cover_letter' => ['bail','required', 'string','alpha', 'max:5000'],
-            'milestone' => ['bail', 'required'],
-            'payment_type' => ['bail', 'required','string'],
-            'estimated_enddate' => ['bail', 'required', 'string'],
+//            'milestone' => ['bail', 'required'],
+//            'payment_type' => ['bail', 'required','string'],
+            'proposed_duration' => ['bail', 'required', 'string'],
             'proposed_fee' =>['required', 'numeric'],
         ]);
     }
