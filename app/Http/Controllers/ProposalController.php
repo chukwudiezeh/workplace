@@ -58,7 +58,7 @@ class ProposalController extends Controller
             'cover_letter' => ['bail','required', 'string','alpha', 'max:5000'],
 //            'milestone' => ['bail', 'required'],
 //            'payment_type' => ['bail', 'required','string'],
-            'proposed_duration' => ['bail', 'required', 'string'],
+            'proposed_duration' => ['bail', 'required', 'numeric'],
             'proposed_fee' =>['required', 'numeric'],
         ]);
     }
