@@ -16,7 +16,8 @@ class ProposalStatus extends Model
     ];
 
 
-    public function job(){
+    public function proposal(){
         return $this->hasMany(Proposal::class,'proposal_status_id');
     }
+
 }
