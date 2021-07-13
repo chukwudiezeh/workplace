@@ -24,4 +24,7 @@ class Proposal extends Model
     public function proposalStatus(){
         return $this->belongsTo(ProposalStatus::class, 'proposal_status_id');
     }
+    public function job(){
+        return $this->belongsTo(Job::class, 'job_id');
+    }
 }
