@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\Hired;
+use App\Http\Resources\ProposalResource;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\Models\Proposal;
@@ -46,7 +47,8 @@ class ProposalController extends Controller
             'proposed_fee' => $request->proposed_fee,
         ]);
 
-        return response()->json(['data'=>$proposal,'message' => 'Proposal sent successfully'], 201);
+        return  new ProposalResource([$proposal, 'message' => 'Proposal Sent!']);
+//            response()->json(['data'=>$proposal,'message' => 'Proposal sent successfully'], 201);
     }
     
     //validates request

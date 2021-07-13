@@ -52,6 +52,10 @@ class Job extends Model
         return $this->hasMany(job::class,'job_id');
     }
 
+    public function proposals(){
+        return $this->hasMany(Proposal::class, 'job_id');
+    }
+
     public function contracts(){
         return $this->hasMany(Contract::class, 'job_id');
     }

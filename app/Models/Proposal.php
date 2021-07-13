@@ -20,4 +20,8 @@ class Proposal extends Model
         'freelancer_id','job_id','cover_letter','milestone','payment_type', 'proposed_duration_id',
         'proposed_fee','proposal_status_id',
     ];
+
+    public function proposalStatus(){
+        return $this->belongsTo(ProposalStatus::class, 'proposal_status_id');
+    }
 }
