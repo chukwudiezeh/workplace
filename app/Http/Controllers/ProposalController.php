@@ -47,7 +47,7 @@ class ProposalController extends Controller
             'proposed_fee' => $request->proposed_fee,
         ]);
 
-        return  new ProposalResource([$proposal, 'message' => 'Proposal Sent!']);
+        return  new ProposalResource($proposal);
 //            response()->json(['data'=>$proposal,'message' => 'Proposal sent successfully'], 201);
     }
     

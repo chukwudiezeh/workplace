@@ -16,7 +16,7 @@ class ProposalResource extends JsonResource
     {
 //        return parent::toArray($request);
 
-        return ([
+        return [
             'id' => $this->id,
             'freelancer' => $this->freelancer_id,
             'job' => $this->job,
@@ -28,6 +28,6 @@ class ProposalResource extends JsonResource
             'proposal_status' => $this->proposalStatus,
             'request_changes' => $this->request_changes,
             'changes_note' => $this->changes_note
-        ]);
+        ];
     }
 }
