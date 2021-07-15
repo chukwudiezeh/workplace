@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Proposal extends Model
+class  Proposal extends Model
 {
     use HasFactory;
 
@@ -26,5 +26,9 @@ class Proposal extends Model
     }
     public function job(){
         return $this->belongsTo(Job::class, 'job_id');
+    }
+
+    public function freelancer(){
+        return $this->belongsTo(Freelancer::class, 'freelancer_id');
     }
 }

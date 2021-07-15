@@ -30,7 +30,7 @@ class JobController extends Controller
         return  JobResource::collection($jobs);
     }
 
-    public function show(Job $job){
+    public function show(Freelancer $freelancer, Job $job){
         return response()->json(['data' => $job], 200);
     }
 

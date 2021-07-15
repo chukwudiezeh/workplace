@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\JobResource;
 
 class ProposalResource extends JsonResource
 {
@@ -18,8 +19,8 @@ class ProposalResource extends JsonResource
 
         return [
             'id' => $this->id,
-            'freelancer' => $this->freelancer_id,
-            'job' => $this->job,
+            'freelancer_id' => $this->freelancer_id,
+            'job' => new JobResource($this->job),
             'cover_letter' => $this->cover_letter,
             'milestone' => $this->milestone,
             'payment_type' => $this->payment_type,

@@ -15,15 +15,12 @@ class ProposalController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @param \App\Models\Freelancer
-     * @return \Illuminate\Http\Response
      */
     public function index(Freelancer $freelancer)
     {
-        $proposals = Proposal::where('freelancer_id',$freelancer->id);//TODO
+        $proposals = Proposal::where('freelancer_id','=', $freelancer->id)->get();
 
-        return response()->json(['data'=> $proposals], 200);
+        return ProposalResource::collection($proposals);
     }
 
     /**
