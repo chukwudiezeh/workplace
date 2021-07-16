@@ -28,7 +28,8 @@ class ProposalResource extends JsonResource
             'proposed_fee' => $this->proposed_fee,
             'proposal_status' => $this->proposalStatus,
             'request_changes' => $this->request_changes,
-            'changes_note' => $this->changes_note
+            'changes_note' => $this->changes_note,
+            'created_at' => $this->created_at
         ];
     }
 }
