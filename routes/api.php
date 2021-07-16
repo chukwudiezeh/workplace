@@ -32,7 +32,7 @@ use App\Http\Controllers\JobInviteController;
 Route::prefix('workplace')->group(function() {
     Route::post('register', [RegisterController::class, 'register']); //register
     Route::post('login', [LoginController::class, 'login']); //login
-//    Route::middleware('auth:sanctum')->group(function () {
+    Route::middleware('auth:sanctum')->group(function () {
         //Freelancer routes begin
 
         Route::prefix('{freelancer}')->group(function () {
@@ -70,7 +70,7 @@ Route::prefix('workplace')->group(function() {
                 Route::get('{job}/{search}', [JobController::class, 'search'])->middleware('freelancer'); //search with keywords
             });
             Route::prefix('proposals')->group(function (){
-                Route::get('', [ProposalController::class, 'index']); //View my proposals
+                Route::get('', [ProposalController::class, 'index'])->middleware('freelancer'); //View my proposals
                 Route::prefix('{proposal}')->group(function(){
                     Route::get('',[ProposalController::class, 'show'])->middleware('freelancer'); //show me a proposal details
                     Route::patch('update', [ProposalController::class, 'update'])->middleware('freelancer'); //update a sent proposal
@@ -80,5 +80,5 @@ Route::prefix('workplace')->group(function() {
 
 
         });
-//    });
+    });
 });
