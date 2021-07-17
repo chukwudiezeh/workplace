@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contract;
 use App\Models\Client;
+use App\Http\Resources\ContractResource;
 
 
 class ContractController extends Controller
@@ -21,6 +22,14 @@ class ContractController extends Controller
     public function showFreelancerContracts($freelancer)
     {
         $contracts = Contract::where('freelancer_id', $freelancer)->get();
+        $loop_index=0;
+        foreach($contracts as $contract){
+
+            $number_of_hires = Contract::where('job_id','=', $contract->job_id)->count();
+            $contracts[$loop_index]->number_of_hires = $number_of_hires;
+        }
+
+        return ContractResource::collection($contracts);
     }
 
     public function showOneContract($id, Contract $contract)
