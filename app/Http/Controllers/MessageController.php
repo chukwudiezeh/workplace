@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Models\Conversation;
 use App\Models\Contract;
+use App\Events\Message;
 
 class MessageController extends Controller
 {
@@ -15,13 +16,15 @@ class MessageController extends Controller
         return response()->json(['data'=> $messages]);
     }
 
-    public function addMessage(Contract $contract, Conversation $conversation, Request $request){
-        $message = new Message;
+    public function addMessage(Contract $contract, Conversation $conversation,Message $message, Request $request){
+//        $message = new Message;
+//
+//        $message->conversation_id = $conversation->id;
+//        $message_details = $message->message_details;
+//        $message->message_details = array_push($message_details,$request->message_details);
+//
+//        $message->save();
 
-        $message->conversation_id = $conversation->id;
-        $message_details = $message->message_details;
-        $message->message_details = array_push($message_details,$request->message_details);
-
-        $message->save();
+        event(new Message($message->id, $conversation->id, $request->message_info));
     }
 }

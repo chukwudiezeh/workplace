@@ -21,11 +21,11 @@ class CreateContractStatusTable extends Migration
         });
 
         $contract_status = [
-            ['name'=>'Approved for Payments'],
-            ['name' => 'Completed but pending approval'],
+            ['name' => 'In production'],
             ['name' => 'Need Changes'],
             ['name' => 'Delayed'],
-            ['name' => 'In production'],
+            ['name'=>'Approved for Payments'],
+            ['name' => 'Completed but pending approval'],
         ];
 
         DB::table('contract_status')->insert($contract_status);

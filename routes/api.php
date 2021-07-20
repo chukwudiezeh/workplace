@@ -102,7 +102,7 @@ Route::prefix('workplace')->group(function() {
                         Route::get('',[ConversationController::class,'getAllConversations']); //TODO check this controller function
                         Route::post('create', [ConversationController::class, 'create'])->middleware('client');
                         Route::get('{conversation}/messages', [MessageController::class, 'getMessages']);
-                        Route::post('{conversation}/messages/addMessage',[MessageController::class,'store']);
+                        Route::post('{conversation}/messages/{message}/addMessage',[MessageController::class,'store']);
                     });
                 });
             });

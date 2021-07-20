@@ -10,32 +10,24 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-
-class Hired
+class Message implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $client;
-    public $freelancer;
-    public $job;
-    public $proposal;
-    public $compensation_type;
-    public $contract_fee;
-    public $proposed_enddate;
+    public $message_id;
+    public $conversation_id;
+    public $message_info; //message_details:[{sender_user_type:"",sender_id:"",message_type:"", message:"", date:"", time:""} ]
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($client, $freelancer,$job,$proposal,$compensation_type,$contract_fee, $proposed_enddate)
+    public function __construct($message_id, $conversation_id, $message_info)
     {
-        $this->client = $client;
-        $this->freelancer = $freelancer;
-        $this->job = $job;
-        $this->proposal = $proposal;
-        $this->compensation_type = $compensation_type;
-        $this->contract_fee = $contract_fee;
-        $this->proposed_enddate = $proposed_enddate;
+        $this->conversation_id = $conversation_id;
+        $this->message_id = $message_id;
+        $this->message_info = $message_info;
     }
 
     /**
@@ -45,6 +37,10 @@ class Hired
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new Channel('chat');
+    }
+
+    public function broadcastAs(){
+        return 'message';
     }
 }
