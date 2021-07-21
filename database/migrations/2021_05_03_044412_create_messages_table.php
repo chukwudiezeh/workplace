@@ -17,7 +17,10 @@ class CreateMessagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('conversation_id');
             $table->foreign('conversation_id')->references('id')->on('conversations')->onDelete('cascade');
-            $table->json('message_details'); //messages:[{senderType:"",senderId:"",message_type:"", message:"", date:"", time:""} ]
+            $table->string('sender_type');
+            $table->unsignedSmallInteger('sender_id');
+            $table->text('message');
+            $table->string('message_type');
             $table->timestamps();
         });
     }

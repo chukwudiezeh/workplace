@@ -10,24 +10,20 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class Message implements ShouldBroadcast
+class Messages implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $message_id;
-    public $conversation_id;
-    public $message_info; //message_details:[{sender_user_type:"",sender_id:"",message_type:"", message:"", date:"", time:""} ]
+    public $message_details;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($message_id, $conversation_id, $message_info)
+    public function __construct($message_details)
     {
-        $this->conversation_id = $conversation_id;
-        $this->message_id = $message_id;
-        $this->message_info = $message_info;
+        $this->message_details = $message_details;
     }
 
     /**
@@ -41,6 +37,6 @@ class Message implements ShouldBroadcast
     }
 
     public function broadcastAs(){
-        return 'message';
+        return 'messages';
     }
 }
