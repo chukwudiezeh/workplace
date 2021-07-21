@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Conversation;
 use Illuminate\Http\Request;
 use App\Models\Contract;
 use App\Models\Client;
@@ -27,6 +28,9 @@ class ContractController extends Controller
 
             $number_of_hires = Contract::where('job_id','=', $contract->job_id)->count();
             $contracts[$loop_index]->number_of_hires = $number_of_hires;
+
+            $conversations = Conversation::where('job_id', '=', $contract->job_id)->get();
+            $contracts[$loop_index]->conversations = $conversations;
         }
 
         return ContractResource::collection($contracts);
