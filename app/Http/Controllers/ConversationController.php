@@ -9,8 +9,8 @@ use App\Models\Conversation;
 class ConversationController extends Controller
 {
     //client actions
-    public function getAllConversations(Contract $contract, $job_id){
-        $conversations = Conversations::where('job_id', $job_id)->get();
+    public function getAllConversations(Contract $contract, $job){
+        $conversations = Conversations::where('job_id', $job)->get();
 
         return response()->json(['data'=> $conversations]);
     }
