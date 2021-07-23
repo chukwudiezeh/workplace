@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Conversation;
+use App\Models\Contract;
 
 
 class ConversationController extends Controller
