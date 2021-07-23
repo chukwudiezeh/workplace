@@ -99,7 +99,7 @@ Route::prefix('workplace')->group(function() {
                     });
 
                     Route::prefix('conversations')->group(function(){
-                        Route::get('',[ConversationController::class,'getAllConversations']); //TODO check this controller function
+                        Route::get('{job}',[ConversationController::class,'getAllConversations']); //TODO check this controller function
                         Route::post('create', [ConversationController::class, 'create'])->middleware('client');
                         Route::get('{conversation}/messages', [MessageController::class, 'getMessages']);
                         Route::post('{conversation}/addMessage',[MessageController::class,'addMessage']);
