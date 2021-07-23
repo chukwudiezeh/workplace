@@ -10,8 +10,8 @@ use App\Events\Messages;
 
 class MessageController extends Controller
 {
-    public function getMessages(Conversation $conversation){
-        $messages = Message::where('conversation_id', $conversation->id)->get();
+    public function getMessages( $conversation){
+        $messages = Message::where('conversation_id', $conversation)->get();
 
         return response()->json(['data'=> $messages]);
     }

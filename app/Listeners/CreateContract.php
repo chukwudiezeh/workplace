@@ -37,7 +37,7 @@ class CreateContract
             $conversation->title = "General Conversations";
             $conversation->client_id = $event->client;
             $conversation->job_id = $event->job;
-            $conversation->participants = [[$freelancer_dets]];
+            $conversation->participants = [$freelancer_dets];
              $conversation->save();
         }else{
             $participants = $conversation_check->participants;
