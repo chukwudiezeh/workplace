@@ -10,7 +10,7 @@ use App\Models\Contract;
 class ConversationController extends Controller
 {
     //client actions
-    public function getAllConversations(Contract $contract, $job){
+    public function getAllConversations($freelancer, Contract $contract, $job){
         $conversations = Conversation::where('job_id', $job)->get();
 
         return response()->json(['data'=> $conversations]);
