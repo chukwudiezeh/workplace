@@ -10,7 +10,7 @@ class ConversationController extends Controller
 {
     //client actions
     public function getAllConversations(Contract $contract, $job){
-        $conversations = Conversations::where('job_id', $job)->get();
+        $conversations = Conversation::where('job_id', $job)->get();
 
         return response()->json(['data'=> $conversations]);
     }
