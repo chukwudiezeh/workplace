@@ -26,14 +26,12 @@ use App\Models\Conversation;
 //});
 
 Broadcast::channel('chat.{conversation}', function($user, Conversation $conversation){
-    if ($user->id == $conversation->client_id){
+    if ($user->id === $conversation->client_id){
         return true;
     }
-    foreach ($conversation->participants as $participant){
-        if ($participant->user->id == $user->id){
+    foreach ($conversation->participants->freelancers as $freelancer){
+        if ($freelancer->user->id === $user->id){
             return true;
-        }else{
-            return false;
         }
     }
 //    return $user->id === $conversation->participant;
