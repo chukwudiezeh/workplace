@@ -35,7 +35,7 @@ class Messages implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('chat.'. $this->latest_message->conversation_id);
+        return new Channel('chat.'. $this->latest_message->conversation_id);
 //        foreach($this->conversation->participants as $participant){
 //            array_push($channels, new PrivateChannel('chatFreelancer.'. $participant->id));
 //        }
