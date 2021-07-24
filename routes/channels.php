@@ -27,9 +27,9 @@ use App\Models\Conversation;
 
 Broadcast::channel('chat.{conversation}', function($user, Conversation $conversation){
     if ($user->user_type_id != 1){
-        return $user->id === $conversation->client_id;
+        return $user->id === Conversation::find($conversation)->client_id;
     }else{
-        foreach ($conversation->participants->freelancers as $freelancer){
+        foreach (Conversation::find($conversation)->participants->freelancers as $freelancer){
             return $user->id === $freelancer->user->id;
         }
     }
