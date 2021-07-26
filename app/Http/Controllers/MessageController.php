@@ -16,7 +16,7 @@ class MessageController extends Controller
         return response()->json(['data'=> $messages]);
     }
 
-    public function addMessage(Contract $contract, Conversation $conversation, Request $request){
+    public function addMessage($freelancer, Contract $contract, Conversation $conversation, Request $request){
         $message_details = new Message;
         $message_details->conversation_id = $conversation->id;
         $message_details->sender_type = $request->senderType;
