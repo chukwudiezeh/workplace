@@ -115,7 +115,6 @@ Route::prefix('workplace')->group(function() {
                 Route::prefix('{freelancer}')->group(function(){
                     Route::get('', [FreelancerController::class, 'showFreelancer'])->middleware('client');
                     Route::post('sendInvite', [JobInviteController::class, 'createMyInvite'])->middleware('client');//TODO notify freelancer of invite
-
                 });
 
             });
