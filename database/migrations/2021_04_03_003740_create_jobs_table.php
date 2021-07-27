@@ -62,7 +62,7 @@ class CreateJobsTable extends Migration
                 'skills_required' => '{"a":"PHP","b": "Laravel","c": "MYSQL"}',
                 'budget'=> 40000.00],
             [
-                'client_id' => 2,
+                'client_id' => 1,
                 "title"=> "I Need a Developer for a fullStack role",
                 "description"=> "I have a web app that I built basically its a form, what I need is to make the front end mobile first and add change some thing on the form from end. Example pulls keyboard our when opening the page on iPhone",
                 'category_id' => 1,
