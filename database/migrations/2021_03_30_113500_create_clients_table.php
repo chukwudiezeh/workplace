@@ -33,6 +33,8 @@ class CreateClientsTable extends Migration
 $client = [
     'user_id' => 2
 ];
+
+DB::table('clients')->insert($client);
     }
 
     /**
