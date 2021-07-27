@@ -29,6 +29,8 @@ class CreateClientsTable extends Migration
             $table->string('position_at_company')->nullable();
             $table->timestamps();
         });
+
+
     }
 
     /**
