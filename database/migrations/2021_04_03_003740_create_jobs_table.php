@@ -47,7 +47,7 @@ class CreateJobsTable extends Migration
             'experience_level_id' => 2,
             'job_status_id'=> 1,
             'duration_id'=> 1,
-            'skills_required' => "{\"a\":\"PHP\",\"b\": \"JavaScript\",\"c\": \"MYSQL\"}",
+            'skills_required' => '{"a":"PHP","b": "JavaScript","c": "MYSQL"}',
             'budget'=> 50000.00],
             [
                 'client_id' => 1,
@@ -59,23 +59,20 @@ class CreateJobsTable extends Migration
                 'experience_level_id' => 2,
                 'job_status_id'=> 1,
                 'duration_id'=> 2,
-                'skills_required' => "{\"a\":\"PHP\",\"b\": \"Laravel\"',\"c\": \"MYSQL\"}",
+                'skills_required' => '{"a":"PHP","b": "Laravel","c": "MYSQL"}',
                 'budget'=> 40000.00],
             [
                 'client_id' => 2,
                 "title"=> "I Need a Developer for a fullStack role",
-                "description"=> "I have a web app that I built basically its a form, what I need is to make the front end mobile first and add change some thing on the form from end.
-                                    Example pulls keyboard our when opening the page on iPhone",
+                "description"=> "I have a web app that I built basically its a form, what I need is to make the front end mobile first and add change some thing on the form from end. Example pulls keyboard our when opening the page on iPhone",
                 'category_id' => 1,
                 'subcategory_id' => 1,
                 'compensation_type_id'=> 1,
                 'experience_level_id' => 2,
                 'job_status_id'=> 1,
                 'duration_id'=> 2,
-                'skills_required' => "{\"a\":\"JavaScript\",\"b\": \"ReactJs\",\"c\": \"Firebase\"}",
-                'budget'=> 30000.00
-
-            ]
+                'skills_required' => '{"a":"JavaScript","b": "ReactJs","c": "Firebase"}',
+                'budget'=> 30000.00]
         ];
 
         DB::table('jobs')->insert($jobs);
