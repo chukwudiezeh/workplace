@@ -32,7 +32,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
         });
 
-        $user = [
+        $user = [[
             'firstname' => 'chuks',
             'lastname' => 'chuks',
             'email' => 'chuks@email.com',
@@ -43,7 +43,19 @@ class CreateUsersTable extends Migration
             "phone_verified_at"=> "2021-07-02 17:16:37",
             "user_type_id"=> 1,
             "status"=> 1
-        ];
+        ],
+            [
+                'firstname' => 'Nnamdi',
+                'lastname' => 'Ijeh',
+                'email' => 'nnamdiijeh@email.com',
+                'password' => \Illuminate\Support\Facades\Hash::make('Rootuser1'),
+                'phone' => '08187332322',
+                'email_verified' => 1,
+                'phone_verified' => 1,
+                "phone_verified_at"=> "2021-07-02 17:16:37",
+                "user_type_id"=> 2,
+                "status"=> 1
+            ]];
         DB::table('users')->insert($user);
     }
 

@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff7eb033-df5a-4c34-819e-444b96beccad" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_03_011232_create_subcategories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_03_011232_create_subcategories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_30_113500_create_clients_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_30_113500_create_clients_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,13 +69,13 @@
           <entry key="Procfile" value="2" />
           <entry key="env" value="12" />
           <entry key="json" value="3" />
-          <entry key="php" value="483" />
+          <entry key="php" value="497" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="481" />
+          <entry key="PHP" value="495" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="Scratch" value="2" />
         </counts>
@@ -81,13 +85,13 @@
           <entry key="dummy" value="34" />
           <entry key="env" value="282" />
           <entry key="json" value="1" />
-          <entry key="php" value="35097" />
+          <entry key="php" value="35239" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="35096" />
+          <entry key="PHP" value="35238" />
           <entry key="PLAIN_TEXT" value="316" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -96,57 +100,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/api.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="116" column="150" selection-start-line="116" selection-start-column="150" selection-end-line="116" selection-end-column="150" />
-              <folding>
-                <element signature="e#8#36#0#PHP" expanded="true" />
-                <element signature="e#1479#4021#2#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_30_113500_create_clients_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FreelancerController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="40" column="37" lean-forward="true" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-              <folding>
-                <element signature="e#40#82#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="155" column="36" selection-start-line="155" selection-start-column="36" selection-end-line="155" selection-end-column="36" />
-              <folding>
-                <element signature="e#8254#10314#2#PHP" />
-              </folding>
+            <state relative-caret-position="107">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
@@ -172,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Middleware/EnsureClient.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/EnsureFreelancer.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/UserResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" />
@@ -184,7 +141,6 @@
         <option value="$PROJECT_DIR$/app/Models/Category.php" />
         <option value="$PROJECT_DIR$/app/Providers/DropboxServiceProvider.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_03_29_105957_create_freelancers_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Resources/JobResource.php" />
         <option value="$PROJECT_DIR$/app/Models/ProposalStatus.php" />
@@ -202,7 +158,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Events/Hired.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_05_03_044030_create_conversations_table.php" />
         <option value="$PROJECT_DIR$/app/Models/Message.php" />
         <option value="$PROJECT_DIR$/app/Events/Message.php" />
@@ -221,7 +176,10 @@
         <option value="$PROJECT_DIR$/app/Http/Resources/FreelancerResource.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FreelancerController.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_03_03_011232_create_subcategories_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_03_30_113500_create_clients_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php" />
       </list>
     </option>
@@ -492,12 +450,12 @@
       <workItem from="1626800579594" duration="8212000" />
       <workItem from="1626992248960" duration="34830000" />
       <workItem from="1627288333691" duration="4814000" />
-      <workItem from="1627328838360" duration="11060000" />
+      <workItem from="1627328838360" duration="12627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="442648000" />
+    <option name="totallyTimeSpent" value="444215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -541,13 +499,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_29_120827_create_freelance_skills_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_29_114502_create_employment_histories_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -555,32 +506,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_03_011232_create_subcategories_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_02_29_112423_create_categories_table.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_01_29_111920_create_experience_levels_table.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_052613_create_proposal_status_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Proposal.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -624,24 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100012_create_contract_status_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="112" selection-start-line="31" selection-start-column="112" selection-end-line="31" selection-end-column="112" />
         </state>
       </provider>
     </entry>
@@ -780,13 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_29_105957_create_freelancers_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -866,17 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="116" column="150" selection-start-line="116" selection-start-column="150" selection-end-line="116" selection-end-column="150" />
-          <folding>
-            <element signature="e#8#36#0#PHP" expanded="true" />
-            <element signature="e#1479#4021#2#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FreelancerController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -887,17 +782,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="116" column="150" selection-start-line="116" selection-start-column="150" selection-end-line="116" selection-end-column="150" />
+          <folding>
+            <element signature="e#8#36#0#PHP" expanded="true" />
+            <element signature="e#1479#4021#2#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_03_011232_create_subcategories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_02_29_112423_create_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_29_105957_create_freelancers_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_192515_create_proposals_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="20" column="60" lean-forward="true" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_04_052613_create_proposal_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_03_30_113500_create_clients_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="253">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="39" column="37" lean-forward="true" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100012_create_contract_status_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_14_100254_create_contracts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_04_03_003740_create_jobs_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
+        <state relative-caret-position="107">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>

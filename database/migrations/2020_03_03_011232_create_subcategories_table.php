@@ -23,8 +23,8 @@ class CreateSubcategoriesTable extends Migration
         });
 
         $sub_cat = [
-            ['name'=>'Hourly', 'category_id'=>1],
-            ['name' => 'Fixed', 'category_id' =>1],
+            ['name'=>'Web Development', 'category_id'=>1],
+            ['name' => 'Mobile Development', 'category_id' =>1],
         ];
 
         DB::table('subcategories')->insert($sub_cat);

@@ -47,7 +47,7 @@ class CreateContractsTable extends Migration
 //        [
 //            'client_id'=> 2,
 //            'freelancer_id'=> 6,
-//            'job_id'=> 19,
+//            'job_id'=> 3,
 //            'proposal_id'=> 20,
 //            'starts_at'=> now(),
 //            'ends_at'=> now(),
@@ -77,8 +77,8 @@ class CreateContractsTable extends Migration
 //                'contract_fee'=> "200000.00",
 //                'contract_status_id'=> 1],
 //        ];
-//
-//        \Illuminate\Support\Facades\DB::table('contracts')->insert($con);
+
+//        DB::table('contracts')->insert($con);
     }
 
     /**
