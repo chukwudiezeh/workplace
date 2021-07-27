@@ -26,11 +26,9 @@ class CreateClientsTable extends Migration
             $table->string('company_address')->nullable();
             $table->string('company_website')->nullable();
             $table->string('company_logo')->nullable();
-            $table->sting('position_at_company')->nullable();
+            $table->string('position_at_company')->nullable();
             $table->timestamps();
         });
-
-        DB::table('clients')->insert(['id'=> 1]);
     }
 
     /**

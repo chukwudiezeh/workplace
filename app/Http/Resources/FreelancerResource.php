@@ -14,6 +14,17 @@ class FreelancerResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'firstname' => $this->firstname,
+            'lastname' => $this->lastname,
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'email_verified' => $this->email_verified,
+            'phone_verified' => $this->phone_verified,
+            'user_type_id' => $this->user_type_id,
+            'created_at' => $this->created_at,
+            'freelancer' => $this->freelancer
+        ];
     }
 }

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\FreelancerResource;
 use Illuminate\Http\Request;
 use App\Models\Freelancer;
 use App\Models\jobInvites;
+use App\Models\User;
 use App\Models\Client;
 class FreelancerController extends Controller
 {
@@ -24,9 +26,9 @@ class FreelancerController extends Controller
     //client
     public function index()
     {
-        $freelancers = User::where('user_type_id',1); //TODO
+        $freelancers = User::where('user_type_id',1)->get(); //TODO
 
-        return response()->json(['data'=> $freelancers], 200);
+        return FreelancerResource::collection($freelancers);
     }
 
     public function showFreelancer(Freelancer $freelancer)
