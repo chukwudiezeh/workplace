@@ -16,6 +16,17 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->text('address')->nullable();
+            $table->boolean('got_company')->nullable();
+            $table->string('company_name')->nullable();
+            $table->string('company_tagline')->nullable();
+            $table->string('company_description')->nullable();
+            $table->string('company_address')->nullable();
+            $table->string('company_website')->nullable();
+            $table->string('company_logo')->nullable();
+            $table->sting('position_at_company')->nullable();
             $table->timestamps();
         });
 
