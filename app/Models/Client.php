@@ -11,7 +11,7 @@ class Client extends Model
 
     protected $table = 'clients';
 
-    protected $fillable = [''];
+    protected $fillable = ['user_id','address', 'got_company', 'company_name', 'company_tagline', 'company_description', 'company_address', 'company_website', 'company_logo', 'position_at_company'];
 
     public function jobs(){
         return $this->hasMany(Job::class, 'client_id');
