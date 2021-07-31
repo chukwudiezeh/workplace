@@ -118,6 +118,35 @@ Route::prefix('workplace')->group(function() {
                 });
 
             });
+            Route::prefix('jobs')->group(function (){
+                Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
+                Route::post('store', [JobController::class, 'store'])->middleware('client');
+                Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
+                Route::prefix('{job}')->group(function(){
+                    Route::get('', [JobController::class, 'showOneJob'])->middleware('client');
+                    Route::patch('update',[JobController::class, 'update'])->middleware('client');
+                    Route::prefix('proposalss')->group(function (){
+                        Route::get('',[ProposalController::class, 'showJobProposals'])->middleware('client');
+                        Route::prefix('{proposal}')->group(function (){
+                            Route::get('', [ProposalController::class,'showOneJobProposal'])->middleware('client');
+                            Route::patch('decline',[ProposalController::class,'declineProposal'])->middleware('client'); //TODO notify freelancer of decline
+                            Route::patch('accept',[ProposalController::class,'acceptProposal'])->middleware('client'); //TODO notify freelancer of acceptance
+                            Route::patch('requestChanges',[ProposalController::class,'requestChangesInProposal'])->middleware('client'); //TODO notify freelancer of change request
+                        });
+                    });
+
+                    Route::prefix('jobInvites')->group(function(){
+                        Route::get('', [JobInviteController::class, 'seeMyInvites'])->middleware('client');
+                        Route::prefix('{jobInvite}')->group(function(){
+                            Route::get('', [JobInviteController::class, 'seeMyOneInvite'])->middleware('client');
+                            Route::patch('update', [JobInviteController::class, 'updateMyInvites'])->middleware('client');
+                            Route::patch('cancel', [JobInviteController::class, 'cancelMyInvite'])->middleware('client');
+
+                        });
+                    });
+
+                });
+            });
 
         });
     });
