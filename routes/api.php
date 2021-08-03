@@ -114,7 +114,7 @@ Route::prefix('workplace')->group(function() {
                 Route::get('',[FreelancerController::class, 'index'])->middleware('client');
                 Route::prefix('{freelancer}')->group(function(){
                     Route::get('', [FreelancerController::class, 'showFreelancer'])->middleware('client');
-                    Route::post('sendInvite', [JobInviteController::class, 'createMyInvite'])->middleware('client');//TODO notify freelancer of invite
+                    Route::post('send_invite', [JobInviteController::class, 'createInvite'])->middleware('client');//TODO notify freelancer of invite
                 });
 
             });
@@ -135,16 +135,15 @@ Route::prefix('workplace')->group(function() {
                         });
                     });
 
-                    Route::prefix('jobInvites')->group(function(){
-                        Route::get('', [JobInviteController::class, 'seeMyInvites'])->middleware('client');
-                        Route::prefix('{jobInvite}')->group(function(){
-                            Route::get('', [JobInviteController::class, 'seeMyOneInvite'])->middleware('client');
-                            Route::patch('update', [JobInviteController::class, 'updateMyInvites'])->middleware('client');
-                            Route::patch('cancel', [JobInviteController::class, 'cancelMyInvite'])->middleware('client');
+                });
+                Route::prefix('jobInvites')->group(function(){
+                    Route::get('', [JobInviteController::class, 'seeMyInvites'])->middleware('client');
+                    Route::prefix('{jobInvite}')->group(function(){
+                        Route::get('', [JobInviteController::class, 'seeMyOneInvite'])->middleware('client');
+                        Route::patch('update', [JobInviteController::class, 'updateMyInvites'])->middleware('client');
+                        Route::patch('cancel', [JobInviteController::class, 'cancelMyInvite'])->middleware('client');
 
-                        });
                     });
-
                 });
             });
 
