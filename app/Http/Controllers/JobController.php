@@ -105,7 +105,7 @@ class JobController extends Controller
     public function showAllMyJobs(Client $client){
         $my_jobs = Job::where('client_id',$client->id)->get();
 
-        return response()->json(['data' => $my_jobs], 200);
+        return JobResource::collection($my_jobs);
     }
 
     public function showOneJob($client, Job $job){
