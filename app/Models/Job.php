@@ -49,11 +49,11 @@ class Job extends Model
     }
 
     public function jobInvites(){
-        return $this->hasMany(Job::class,'job_id');
+        return $this->hasMany(JobInvites::class,'job_id');
     }
 
     public function proposals(){
-        return $this->hasMany(Job::class,'job_id');
+        return $this->hasMany(Proposal::class,'job_id');
     }
 
     public function contracts(){

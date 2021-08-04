@@ -27,7 +27,10 @@ class JobResource extends JsonResource
             'job_status' => $this->jobStatus,
             'duration' => $this->duration,
             'skills_required' => $this->skills_required,
-            'budget' => $this->budget
+            'budget' => $this->budget,
+            'proposals' => $this->proposals,
+            'job_invites' => $this->job_invities,
+            'created_at' => $this->created_at
         ];
     }
 }
