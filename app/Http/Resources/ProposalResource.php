@@ -19,7 +19,7 @@ class ProposalResource extends JsonResource
 
         return [
             'id' => $this->id,
-            'freelancer_id' => $this->freelancer_id,
+            'freelancer_id' => new FreelanceResource($this->freelancer),
             'job' => new JobResource($this->job),
             'cover_letter' => $this->cover_letter,
             'milestone' => $this->milestone,
