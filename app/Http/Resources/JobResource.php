@@ -29,7 +29,7 @@ class JobResource extends JsonResource
             'duration' => $this->duration,
             'skills_required' => $this->skills_required,
             'budget' => $this->budget,
-//            'proposals' => proposalResource::collection($this->proposals),
+            'proposals' => $this->proposals,
 //            'job_invites' => JobInviteResource::collection($this->jobInvites),
             'created_at' => $this->created_at
         ];
