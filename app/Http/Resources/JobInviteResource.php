@@ -18,6 +18,7 @@ class JobInviteResource extends JsonResource
            'id' => $this->id,
             'message' => $this->message,
             'client_id' => $this->client_id,
+            'client' => new ClientResource($this->client),
             'job' => new JobResource($this->job),
             'freelancer_id' => $this->freelancer_id,
             'freelancer' => new FreelanceResource($this->freelancer),

@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\JobInvites;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class JobResource extends JsonResource
@@ -28,8 +29,8 @@ class JobResource extends JsonResource
             'duration' => $this->duration,
             'skills_required' => $this->skills_required,
             'budget' => $this->budget,
-            'proposals' => $this->proposals,
-            'job_invites' => $this->job_invities,
+//            'proposals' => proposalResource::collection($this->proposals),
+//            'job_invites' => JobInviteResource::collection($this->jobInvites),
             'created_at' => $this->created_at
         ];
     }

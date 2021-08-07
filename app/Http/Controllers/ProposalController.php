@@ -117,10 +117,9 @@ class ProposalController extends Controller
 //client actions
     public function showJobProposals($client, Job $job){
         if ($job->client_id === $client){
-            $job_proposals = Proposal::where('job_id',$job);
-            return response()->json(['data'=> $job_proposals], 200);
+            $job_proposals = Proposal::where('job_id',$job->id);
+            return ProposalResource::collection($job_proposals);
         }
-        return response()->json(['error' => 'Unauthorised'], 401);
     }
 
     public function showOneJobProposal($client, Job $job, Proposal $proposal){

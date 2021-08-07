@@ -16,6 +16,9 @@ class JobInvites extends Model
     public function freelancer(){
         return $this->belongsTo(Freelancer::class, 'freelancer_id');
     }
+    public function client(){
+        return $this->belongsTo(Client::class, 'client_id');
+    }
 
     public function job(){
         return $this->belongsTo(Job::class, 'job_id');

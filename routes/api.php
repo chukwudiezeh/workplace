@@ -121,11 +121,11 @@ Route::prefix('workplace')->group(function() {
             Route::prefix('jobs')->group(function (){
                 Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
                 Route::post('store', [JobController::class, 'store'])->middleware('client');
-                Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
+//                Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
                 Route::prefix('{job}')->group(function(){
                     Route::get('', [JobController::class, 'showOneJob'])->middleware('client');
                     Route::patch('update',[JobController::class, 'update'])->middleware('client');
-                    Route::prefix('proposalss')->group(function (){
+                    Route::prefix('my_proposals')->group(function (){
                         Route::get('',[ProposalController::class, 'showJobProposals'])->middleware('client');
                         Route::prefix('{proposal}')->group(function (){
                             Route::get('', [ProposalController::class,'showOneJobProposal'])->middleware('client');
