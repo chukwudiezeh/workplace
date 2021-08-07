@@ -117,7 +117,7 @@ class ProposalController extends Controller
 //client actions
     public function showJobProposals($client, Job $job){
         if ($job->client_id === $client){
-            $job_proposals = Proposal::where('job_id',$job->id);
+            $job_proposals = Proposal::where('job_id',$job->id)->get();
             return ProposalResource::collection($job_proposals);
         }
     }

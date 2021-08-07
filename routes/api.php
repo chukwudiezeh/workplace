@@ -118,7 +118,7 @@ Route::prefix('workplace')->group(function() {
                 });
 
             });
-            Route::prefix('jobs')->group(function (){
+            Route::prefix('my_jobs')->group(function (){
                 Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
                 Route::post('store', [JobController::class, 'store'])->middleware('client');
 //                Route::get('',[JobController::class, 'showAllMyJobs'])->middleware('client');
