@@ -21,13 +21,13 @@ class Hired
     public $proposal;
     public $compensation_type;
     public $contract_fee;
-    public $proposed_enddate;
+    public $ends_at;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($client, $freelancer,$job,$proposal,$compensation_type,$contract_fee, $proposed_enddate)
+    public function __construct($client, $freelancer,$job,$proposal,$compensation_type,$contract_fee, $ends_at)
     {
         $this->client = $client;
         $this->freelancer = $freelancer;
@@ -35,7 +35,7 @@ class Hired
         $this->proposal = $proposal;
         $this->compensation_type = $compensation_type;
         $this->contract_fee = $contract_fee;
-        $this->proposed_enddate = $proposed_enddate;
+        $this->ends_at = $ends_at;
     }
 
     /**

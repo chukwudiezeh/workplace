@@ -143,7 +143,8 @@ class ProposalController extends Controller
             $proposal->proposal_status_id = 2;
             $proposal->save();
 
-            event(new Hired($client->id,$proposal->freelancer_id,$job->id,$proposal->id,$job->compensation_type_id,$proposal->proposed_fee, $proposal->proposed_enddate));
+            $ends_at = date('Y-m-d');
+            event(new Hired($client->id,$proposal->freelancer_id,$job->id,$proposal->id,$job->compensation_type_id,$proposal->proposed_fee, $ends_at));
             return new ProposalResource($proposal);
         }
     }
