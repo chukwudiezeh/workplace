@@ -138,7 +138,7 @@ class ProposalController extends Controller
         return response()->json(['error' => 'Unauthorised'], 401);
     }
 
-    public function acceptProposal(Client $client, Job $job, Proposal $proposal){
+    public function acceptProposal(Client $client, Job $job, Proposal $proposal, Request $request){
         if ($job->client_id == $client->id && $job->id == $proposal->job_id){
             $proposal->proposal_status_id = 2;
             $proposal->save();
@@ -149,7 +149,7 @@ class ProposalController extends Controller
     }
 
     public function requestChangesInProposal($client, Job $job, Proposal $proposal){
-        if ($job->client_id === $client && $job->id == $proposal->job_id){
+        if ($job->client_id == $client && $job->id == $proposal->job_id){
             $proposal->proposal_status_id = 5;
             $proposal->save();
             return response()->json(['data'=> $proposal], 200);
