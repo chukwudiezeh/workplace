@@ -60,21 +60,21 @@ class JobController extends Controller
             'budget' => $request['budget'],
         ]);
 
-        return response()->json(['data'=> $job,'message' => 'Job created successfully'], 201);
+        return new JobResource($job);
     }
 
     //validates request
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'category_id' => ['bail','required', 'string','alpha', 'max:2000'],
-            'subcategory_id' => ['bail', 'required'],
+            'category_id' => ['bail','required', 'numeric', 'max:2000'],
+            'subcategory_id' => ['bail', 'numeric','required'],
             'compensation_type_id' => ['bail', 'required','string'],
-            'experience_level_id' => ['bail', 'required', 'string'],
+            'experience_level_id' => ['bail', 'required', 'numeric'],
             'job_status_id' =>['required', 'numeric'],
             'duration_id' =>['required', 'numeric'],
-            'description' =>['required', 'numeric'],
-            'skills_required' =>['required', 'numeric'],
+            'description' =>['required', 'string'],
+            'skills_required' =>['required', 'string'],
             'budget' =>['required', 'numeric'],
 
         ]);

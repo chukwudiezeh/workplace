@@ -22,9 +22,9 @@ class CreateExperienceLevelsTable extends Migration
 
 
         $experience_levels = [
-            ['name' => 'Junior'],
-            ['name' => 'Intermediate'],
-            ['name' => 'Senior'],
+            ['name' => 'Entry Level'],
+            ['name' => 'Intermediate Level'],
+            ['name' => 'Expert Level'],
         ];
 
 
