@@ -51,7 +51,7 @@ class JobController extends Controller
             'title' => $request['title'],
             'category_id' => $request['category_id'],
             'subcategory_id' => $request['subcategory_id'],
-            'compensation_type_id' => $request['compensation_type'],
+            'compensation_type_id' => $request['compensation_type_id'],
             'experience_level_id' => $request['experience_level_id'],
             'job_status_id' => $request['job_status_id'],
             'duration_id' => $request['duration_id'],
