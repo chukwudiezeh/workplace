@@ -69,7 +69,7 @@ class JobController extends Controller
         return Validator::make($data, [
             'category_id' => ['bail','required', 'numeric', 'max:2000'],
             'subcategory_id' => ['bail', 'numeric','required'],
-            'compensation_type_id' => ['bail', 'required','string'],
+            'compensation_type_id' => ['bail', 'required','numeric'],
             'experience_level_id' => ['bail', 'required', 'numeric'],
             'job_status_id' =>['required', 'numeric'],
             'duration_id' =>['required', 'numeric'],
