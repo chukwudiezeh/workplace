@@ -16,7 +16,29 @@ class MessageController extends Controller
         return response()->json(['data'=> $messages]);
     }
 
+    public function getClientMessages( $conversation){
+        $messages = Message::where('conversation_id', $conversation)->get();
+
+        return response()->json(['data'=> $messages]);
+    }
+
     public function addMessage($freelancer, Contract $contract, Conversation $conversation, Request $request){
+        $message_details = new Message;
+        $message_details->conversation_id = $conversation->id;
+        $message_details->sender_type = $request->senderType;
+        $message_details->sender_id = $request->senderId;
+        $message_details->message = $request->message;
+        $message_details->message_type = $request->messageType;
+
+        $message_details->save();
+
+        $latest_message = Message::where('conversation_id', $conversation->id)->orderBy('id', 'desc')->first();
+
+        event(new Messages($latest_message));
+        return response()->json($latest_message);
+    }
+
+    public function addClientMessage($client, Contract $contract, Conversation $conversation, Request $request){
         $message_details = new Message;
         $message_details->conversation_id = $conversation->id;
         $message_details->sender_type = $request->senderType;
