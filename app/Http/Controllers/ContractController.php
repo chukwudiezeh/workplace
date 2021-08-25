@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ClientContractResource;
 use App\Models\Conversation;
 use Illuminate\Http\Request;
 use App\Models\Contract;
@@ -15,7 +16,7 @@ class ContractController extends Controller
     {
         $contracts = Contract::where('client_id',$client)->get();
 
-        return new ContractResource($contracts);
+        return ClientContractResource::collection($contracts);
 
 
     }
