@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Conversation;
 use App\Models\Contract;
-
+use App\Models\Client;
 
 class ConversationController extends Controller
 {
@@ -13,6 +13,11 @@ class ConversationController extends Controller
     public function getAllConversations($freelancer, Contract $contract, $job){
         $conversations = Conversation::where('job_id', $job)->get();
 
+        return response()->json(['data'=> $conversations]);
+    }
+
+    public function getAllClientConversations(Client $client, Contract $contract, $job){
+        $conversations = Conversation::where('job_id', $job)->get();
         return response()->json(['data'=> $conversations]);
     }
 

@@ -169,7 +169,7 @@ Route::prefix('workplace')->group(function() {
                     });
 
                     Route::prefix('conversations')->group(function(){
-                        Route::get('',[ConversationController::class,'getAllConversations']); //TODO check this controller function
+                        Route::get('',[ConversationController::class,'getAllClientConversations']); //TODO check this controller function
                         Route::post('create', [ConversationController::class, 'create'])->middleware('client');
                         Route::patch( '{conversation}/addparticipant/{freelancer}', [ConversationController::class,'addParticipant'])->middleware('client');
                         Route::get('{conversation}/messages', [MessageController::class, 'getMessages']);
