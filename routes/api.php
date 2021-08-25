@@ -147,6 +147,41 @@ Route::prefix('workplace')->group(function() {
                 });
             });
 
+            Route::prefix('my_contracts')->group(function(){
+                Route::get('', [ContractController::class,'showClientContracts'])->middleware('client');
+                Route::prefix('{contract}')->group(function(){
+                    Route::get('', [ContractController::class, 'showOneContract'])->middleware('client');
+                    Route::patch('approvedForPayments', [ContractController::class,'approvedForPayments'])->middleware('client');
+                    Route::patch('needChanges',[ContractController::class, 'needChanges'])->middleware('client');
+
+
+                    Route::prefix('jobTaskBoard')->group(function (){
+                        Route::post('create', [JobTaskBoardController::class,'createJobTaskBoard']);
+                        Route::prefix('{jobTaskBoard}')->group(function(){
+                            Route::patch('addTask',[JobTaskBoardController::class, 'addJobTask']);
+                            Route::get('view',[JobTaskBoardController::class, 'viewJobTaskBoard']);
+                            Route::patch('{taskId}/move_to_todo', [JobTaskBoardController::class, 'moveToTodo']);
+                            Route::patch('{taskId}/move_to_doing', [JobTaskBoardController::class, 'moveToDoing']);
+                            Route::patch('{taskId}/move_to_done', [JobTaskBoardController::class, 'moveToDone']);
+                            Route::patch('{taskId}/delete_task', [JobTaskBoardController::class, 'deleteJobTask']);
+                        });
+
+                    });
+
+                    Route::prefix('conversations')->group(function(){
+                        Route::get('',[ConversationController::class,'getAllConversations']); //TODO check this controller function
+                        Route::post('create', [ConversationController::class, 'create'])->middleware('client');
+                        Route::patch( '{conversation}/addparticipant/{freelancer}', [ConversationController::class,'addParticipant'])->middleware('client');
+                        Route::get('{conversation}/messages', [MessageController::class, 'getMessages']);
+                        Route::post('{conversation}/messages/addMessage',[MessageController::class,'store']);
+                    });
+
+
+                });
+
+            });
+
+
         });
     });
 });

@@ -15,7 +15,7 @@ class ContractController extends Controller
     {
         $contracts = Contract::where('client_id',$client)->get();
 
-        return response()->json(['data' =>$contracts], 200);
+        return new ContractResource($contracts);
 
 
     }
