@@ -102,12 +102,10 @@ class LoginController extends Controller
         // throw ValidationException::withMessages([
         //     $this->username() => ['Unauthorized. Invalid email or password']
         // ]);
-        // $error = ['auth_failed'=>'Unauthorized. Invalid email or password'];
-        // return response()->json(['error'=> $error]);
+         $error = ['auth_failed'=>'Unauthorized! Invalid email or password'];
+         return response()->json(['error'=> $error], 401);
 
-        return ValidationException::withMessages([
-            'email' => ['Unauthorized! Invalid email or password.'],
-        ]);
+
     }
 
      public function username()

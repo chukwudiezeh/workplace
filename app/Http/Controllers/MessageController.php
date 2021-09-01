@@ -50,7 +50,7 @@ class MessageController extends Controller
 
         $latest_message = Message::where('conversation_id', $conversation->id)->orderBy('id', 'desc')->first();
 
-        event(new Messages($latest_message));
+        broadcast(new Messages($latest_message))->toOthers();
         return response()->json($latest_message);
     }
 }
