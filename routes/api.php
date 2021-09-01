@@ -112,6 +112,7 @@ Route::prefix('workplace')->group(function() {
         Route::prefix('{client}')->group(function(){
             Route::prefix('freelancers')->group(function(){
                 Route::get('',[FreelancerController::class, 'index'])->middleware('client');
+                Route::get('recommended', [FreelancerController::class, 'recommended'])->middleware('client');
                 Route::prefix('{freelancer}')->group(function(){
                     Route::get('', [FreelancerController::class, 'showFreelancer'])->middleware('client');
                     Route::post('send_invite', [JobInviteController::class, 'createInvite'])->middleware('client');//TODO notify freelancer of invite

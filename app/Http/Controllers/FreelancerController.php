@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\FreelancerResource;
+use App\Http\Resources\FreelanceResource;
 use Illuminate\Http\Request;
 use App\Models\Freelancer;
 use App\Models\jobInvites;
@@ -30,7 +31,12 @@ class FreelancerController extends Controller
 
         return FreelancerResource::collection($freelancers);
     }
+    public function recommended()
+    {
+        $freelancers = Freelancer::where('category_id',1)->inRandomOrder()->limit(5)->get(); //TODO
 
+        return FreelanceResource::collection($freelancers);
+    }
     public function showFreelancer(Freelancer $freelancer)
     {
         return response()->json(['data' => $freelancer], 200);
