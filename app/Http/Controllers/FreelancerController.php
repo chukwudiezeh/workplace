@@ -33,7 +33,7 @@ class FreelancerController extends Controller
     }
     public function recommended()
     {
-        $freelancers = Freelancer::where([['category_id',1], ['job_success_rate', '>=', 70 ]])->inRandomOrder()->limit(5)->get(); //TODO
+        $freelancers = Freelancer::where([['category_id','=',1], ['job_success_rate', '>=', 70 ]])->inRandomOrder()->limit(5)->get(); //TODO
 
         return FreelanceResource::collection($freelancers);
     }

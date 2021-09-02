@@ -24,6 +24,10 @@ class FreelanceResource extends JsonResource
             'category' => $this->category,
             'subcategory' => $this->subcategory,
             'hourly_rate' => $this->hourly_rate,
+            'job_success_rate' => $this->job_success_rate,
+            'position' => $this->position,
+            'skills' => $this->skills,
+            'earnings' => $this->earnings,
             'created_at' => $this->created_at
         ];
     }
