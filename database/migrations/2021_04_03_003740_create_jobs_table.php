@@ -33,7 +33,7 @@ class CreateJobsTable extends Migration
             $table->foreign('duration_id')->references('id')->on('durations')->onDelete('cascade');
             $table->text('description');
             $table->json('skills_required');
-            $table->decimal('budget',8,2);
+            $table->decimal('budget',10,2);
             $table->timestamps();
         });
 

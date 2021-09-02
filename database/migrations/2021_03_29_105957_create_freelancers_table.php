@@ -26,7 +26,7 @@ class CreateFreelancersTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->unsignedSmallInteger('subcategory_id')->nullable();
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
-            $table->decimal('hourly_rate',5,2)->nullable();
+            $table->decimal('hourly_rate',10,2)->nullable();
             $table->smallInteger('job_success_rate')->nullable();
             $table->json('skills')->nullable();
             $table->string('position')->nullable();

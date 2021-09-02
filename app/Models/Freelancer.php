@@ -12,7 +12,11 @@ class Freelancer extends Model
 
     protected $table = 'freelancers';
 
-    protected $fillable = ['user_id','overview','address','experience_level_id','category_id','subcategory_id','hourly_rate'];
+    protected $fillable = ['user_id','overview','address','experience_level_id','category_id','subcategory_id','hourly_rate', 'earnings', 'job_success_rate', 'position', 'skills'];
+
+    protected $casts = [
+        'skills' => 'array',
+    ];
 
     public function user(){
         return $this->belongsTo(User::class, 'user_id');
@@ -51,3 +55,4 @@ class Freelancer extends Model
         return $this->belongsTo(SubCategory::class,'subcategory_id');
     }
 }
+
