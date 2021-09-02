@@ -25,6 +25,11 @@ class CreateSubcategoriesTable extends Migration
         $sub_cat = [
             ['name'=>'Web Development', 'category_id'=>1],
             ['name' => 'Mobile Development', 'category_id' =>1],
+            ['name' => 'Game Development', 'category_id' =>1],
+            ['name' => 'Desktop Development', 'category_id' =>1],
+            ['name' => 'Quality Assurance and testing', 'category_id' =>1],
+            ['name' => 'Product management', 'category_id' =>1],
+
         ];
 
         DB::table('subcategories')->insert($sub_cat);

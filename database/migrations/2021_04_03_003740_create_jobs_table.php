@@ -48,7 +48,7 @@ class CreateJobsTable extends Migration
             'job_status_id'=> 1,
             'duration_id'=> 1,
             'skills_required' => '{"a":"PHP","b": "JavaScript","c": "MYSQL"}',
-            'budget'=> 50000.00],
+            'budget'=> 150000.00],
             [
                 'client_id' => 1,
                 "title"=> "Developer needed to fix install of Laravel application",
@@ -60,7 +60,7 @@ class CreateJobsTable extends Migration
                 'job_status_id'=> 1,
                 'duration_id'=> 2,
                 'skills_required' => '{"a":"PHP","b": "Laravel","c": "MYSQL"}',
-                'budget'=> 40000.00],
+                'budget'=> 400000.00],
             [
                 'client_id' => 1,
                 "title"=> "I Need a Developer for a fullStack role",
@@ -72,7 +72,7 @@ class CreateJobsTable extends Migration
                 'job_status_id'=> 1,
                 'duration_id'=> 2,
                 'skills_required' => '{"a":"JavaScript","b": "ReactJs","c": "Firebase"}',
-                'budget'=> 30000.00]
+                'budget'=> 130000.00]
         ];
 
         DB::table('jobs')->insert($jobs);

@@ -65,6 +65,7 @@ Route::prefix('workplace')->group(function() {
             });
             Route::get('findJobs', [JobController::class, 'index'])->middleware('freelancer'); //retrieve jobs based on my category
             Route::prefix('jobs')->group(function(){
+                Route::get('recommended', [JobController::class, 'recommendJobs'])->middleware('freelancer');
                 Route::get('{job}', [JobController::class, 'show'])->middleware('freelancer'); // show job details so i can apply
                 Route::post('{job}/send_proposal', [ProposalController::class, 'create'])->middleware('freelancer'); //submit proposals //TODO notify client of new proposal
                 Route::get('{job}/{search}', [JobController::class, 'search'])->middleware('freelancer'); //search with keywords

@@ -27,31 +27,13 @@ class CreateFreelancersTable extends Migration
             $table->unsignedSmallInteger('subcategory_id')->nullable();
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
             $table->decimal('hourly_rate',5,2)->nullable();
-            // $table->unsignedSmallInteger('certification_id');
-            // $table->foreign('certification_id')->references('id')->on('certifications')->onDelete('cascade');
-            // $table->unsignedSmallInteger('portfolio_id');
-            // $table->foreign('portfolio_id')->references('id')->on('portfolios')->onDelete('cascade');
-            // $table->unsignedSmallInteger('education_id');
-            // $table->foreign('education_id')->references('id')->on('educations')->onDelete('cascade');
-            // $table->unsignedSmallInteger('employment_history_id');
-            // $table->foreign('employment_history_id')->references('id')->on('employment_histories')->onDelete('cascade');
-            // $table->unsignedSmallInteger('freelance_skill_id');
-            // $table->foreign('freelance_skill_id')->references('id')->on('freelance_skills')->onDelete('cascade');
+            $table->smallInteger('job_success_rate')->nullable();
+            $table->json('skills')->nullable();
+            $table->string('position')->nullable();
+            $table->integer('earnings')->nullable();
             $table->timestamps();
         });
 
-        $freelancer = [
-            "user_id"=> 1,
-            "overview"=> null,
-            "address"=> null,
-            "experience_level_id"=> null,
-            "category_id"=> 1,
-            "subcategory_id"=> null,
-            "hourly_rate"=> null,
-
-        ];
-
-        DB::table('freelancers')->insert($freelancer);
     }
 
     /**

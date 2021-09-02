@@ -30,6 +30,11 @@ class JobController extends Controller
         return  JobResource::collection($jobs);
     }
 
+    public function recommendJobs(Freelancer $freelancer) {
+        $jobs = Job::where([['job_status_id','=',1],['category_id','=',$freelancer->category_id], ['experience_level_id', '=', $freelancer->experience_level_id]])->inRandomOrder()->limit(5)->get();
+        return  JobResource::collection($jobs);
+    }
+
     public function show(Freelancer $freelancer, Job $job){
         return response()->json(['data' => $job], 200);
     }

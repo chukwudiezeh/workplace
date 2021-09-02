@@ -25,6 +25,10 @@ class CreateCategoriesTable extends Migration
         $cat = [
             ['name'=>'Software Develoment'],
             ['name' => 'Design & Creatives'],
+            ['name' => 'Information Tech. & Networking'],
+            ['name' => 'Writing & Translation'],
+            ['name' => 'Administrative Support'],
+            ['name' => 'Data Science & Analytics']
         ];
 
         DB::table('categories')->insert($cat);
