@@ -30,6 +30,11 @@ class CreateClientsTable extends Migration
             $table->timestamps();
         });
 
+$client = [
+    'user_id' => 1
+];
+
+DB::table('clients')->insert($client);
     }
 
     /**
